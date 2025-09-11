@@ -1,61 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
-  <title>Your Name | Web Developer</title>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio - Programación Numérica</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #004080;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    .project {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .project h3 {
+      margin: 0 0 10px;
+    }
+
+    .project p {
+      margin: 0 0 10px;
+    }
+
+    .project a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <h1>Your Name</h1>
-    <p>Frontend / Full-Stack Web Developer</p>
-    <nav>
-      <a href="#about">acerca</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Portafolio - Programación Numérica</h1>
+    <p>Nombre: Juan Pérez | Curso: Finesi 2025</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm a passionate web developer specializing in building responsive and user-friendly websites using HTML, CSS, JavaScript, and modern frameworks like React or Vue. I love turning ideas into reality in the browser.</p>
-  </section>
+  <div class="container">
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>trabajo numero:1</h3>
-        <p>Short description of the project. Technologies used, purpose, etc.</p>
-        <a href="https://github.com/yourusername/project1" target="_blank">GitHub</a>
-        |
-        <a href="https://project1-demo.com" target="_blank">Live Demo</a>
-      </div>
-      <div class="project">
-        <h3>trabajo numero:</h3>
-        <p>Short description of the project. Technologies used, purpose, etc.</p>
-        <a href="https://github.com/yourusername/project2" target="_blank">GitHub</a>
-        |
-        <a href="https://project2-demo.com" target="_blank">Live Demo</a>
-      </div>
-      <!-- Add more project blocks as needed -->
-    </div>
-  </section>
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Estudiante de ingeniería en la Universidad Finesi, cursando la asignatura de Programación Numérica. Este portafolio presenta los proyectos desarrollados a lo largo del curso, aplicando técnicas de análisis numérico mediante programación.</p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
-  </section>
+    <section id="projects">
+      <h2>Proyectos del curso</h2>
+
+      <div class="project">
+        <h3>Trabajo 1: Método de Bisección</h3>
+        <p>Implementación del método de bisección para encontrar raíces de funciones. Desarrollado en Python usando matplotlib para visualizar convergencia.</p>
+        <a href="https://github.com/tuusuario/biseccion" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Trabajo 2: Método de Newton-Raphson</h3>
+        <p>Algoritmo para resolver ecuaciones no lineales utilizando derivadas. Incluye manejo de errores y criterios de parada.</p>
+        <a href="https://github.com/tuusuario/newton-raphson" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Trabajo 3: Eliminación Gaussiana</h3>
+        <p>Resolución de sistemas de ecuaciones lineales mediante eliminación gaussiana con y sin pivoteo.</p>
+        <a href="https://github.com/tuusuario/gauss" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Trabajo 4: Interpolación de Lagrange</h3>
+        <p>Programa para interpolar puntos usando polinomios de Lagrange, visualizando el resultado con gráficos interactivos.</p>
+        <a href="https://github.com/tuusuario/lagrange" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Trabajo 5: Integración Numérica</h3>
+        <p>Aplicación de los métodos del trapecio y Simpson para estimar áreas bajo curvas definidas por funciones matemáticas.</p>
+        <a href="https://github.com/tuusuario/integracion" target="_blank">Ver en GitHub</a>
+      </div>
+
+    </section>
+
+  </div>
 
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    &copy; 2025 Juan Pérez | Programación Numérica - Universidad Finesi
   </footer>
 
 </body>
 </html>
-
