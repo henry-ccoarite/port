@@ -8,7 +8,11 @@ https://www.tooplate.com/view/2140-stellaris-research
 
 @charset "utf-8";
 /* CSS Document */
-
+.habilidad{
+    width: 100%;
+    margin: auto;
+    object-fit: contain;
+}
 * {
             margin: 0;
             padding: 0;
