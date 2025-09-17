@@ -13,6 +13,9 @@ https://www.tooplate.com/view/2140-stellaris-research
     margin: auto;
     object-fit: contain;
 }
+a{
+    text-decoration: none;
+}
 * {
             margin: 0;
             padding: 0;
@@ -536,7 +539,7 @@ https://www.tooplate.com/view/2140-stellaris-research
 
         /* Sections */
         section {
-            padding: 120px 50px;
+            padding: 50px 50px;
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
@@ -679,14 +682,14 @@ https://www.tooplate.com/view/2140-stellaris-research
 
         .achievements-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 60px;
         }
 
         .achievement-item {
             text-align: center;
-            padding: 30px 20px;
+            padding: 30px 10px;
             background: rgba(30, 58, 138, 0.1);
             border-radius: 15px;
             border: 1px solid rgba(245, 158, 11, 0.3);
@@ -853,6 +856,7 @@ https://www.tooplate.com/view/2140-stellaris-research
         .mission-status {
             display: inline-block;
             padding: 8px 16px;
+            margin-top: 20px;
             background: rgba(245, 158, 11, 0.2);
             border: 1px solid var(--solar-gold);
             border-radius: 20px;
@@ -862,7 +866,9 @@ https://www.tooplate.com/view/2140-stellaris-research
             letter-spacing: 1px;
             color: var(--solar-gold);
         }
-
+        .mission-status:hover{
+            color: rgba(236, 15, 15, 0.8);
+        }
         /* Equipment */
         .equipment-container {
             display: flex;
