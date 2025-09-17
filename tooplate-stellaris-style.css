@@ -1049,8 +1049,6 @@ a{
 
         .footer-section a:hover {
             color: var(--galaxy-violet);
-            transform: translateX(8px);
-            display: inline-block;
         }
 
         .social-links {
@@ -1060,20 +1058,24 @@ a{
         }
 
         .social-links a {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border: 2px solid var(--galaxy-violet);
             border-radius: 50%;
             display: flex;
             align-items: center;
+            align-self: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: all 1s ease-in-out;
         }
-
+        a .social{
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+        }
         .social-links a:hover {
-            background: var(--galaxy-violet);
-            transform: translateY(-5px) rotate(360deg);
-            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.4);
+            transform: scale(1.2);
+        
         }
 
         .footer-bottom {
