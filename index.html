@@ -93,7 +93,6 @@
       </div>
 
       <div class="about-grid">
-        <!-- UNIDAD 1 con ventana descriptiva -->
         <div class="about-card">
           <span class="about-card-icon">🔬</span>
           <h4>UNIDAD 1</h4>
@@ -230,7 +229,6 @@
   <script src="tooplate-stellaris-script.js"></script>
   <script src="https://kit.fontawesome.com/10581f7c6f.js" crossorigin="anonymous"></script>
 
-  <!-- 💫 Ventana descriptiva antes de descargar -->
   <script>
     function mostrarDescripcion(titulo, descripcion, enlace) {
       const fondo = document.createElement('div');
@@ -251,7 +249,7 @@
       modal.style.color = '#e0e7ff';
       modal.style.padding = '30px';
       modal.style.borderRadius = '20px';
-      modal.style.width = '480px';
+      modal.style.width = '520px';
       modal.style.boxShadow = '0 0 25px rgba(139, 92, 246, 0.5)';
       modal.style.fontFamily = 'Space Grotesk, sans-serif';
       modal.style.textAlign = 'center';
@@ -259,6 +257,16 @@
       modal.innerHTML = `
         <h2 style="color:#a78bfa; font-family:Orbitron, sans-serif;">${titulo}</h2>
         <p style="margin:20px 0; line-height:1.6; color:#c7d2fe;">${descripcion}</p>
+
+        <!-- 🌟 Zona para pegar tu código -->
+        <textarea id="codigoArea" placeholder="Pega aquí tu código..." 
+          style="width:100%; height:150px; background:#111827; color:#a5b4fc; border:none; border-radius:8px; padding:10px; font-family:monospace; resize:vertical;"></textarea>
+        
+        <button id="copiar-btn" 
+          style="margin-top:10px; background:#10b981; color:white; padding:8px 20px; border:none; border-radius:8px; cursor:pointer;">
+          Copiar código
+        </button>
+
         <div style="margin-top:20px;">
           <button id="descargar-btn" style="background:#7c3aed; color:white; padding:10px 25px; border:none; border-radius:8px; cursor:pointer; font-weight:600;">Descargar</button>
           <button id="cerrar-btn" style="margin-left:10px; background:#4b5563; color:white; padding:10px 25px; border:none; border-radius:8px; cursor:pointer;">Cancelar</button>
@@ -275,6 +283,13 @@
         link.href = enlace;
         link.download = enlace.split('/').pop();
         link.click();
+      };
+
+      document.getElementById('copiar-btn').onclick = () => {
+        const codigo = document.getElementById('codigoArea').value;
+        navigator.clipboard.writeText(codigo).then(() => {
+          alert("✅ Código copiado al portapapeles");
+        });
       };
     }
   </script>
