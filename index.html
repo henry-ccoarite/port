@@ -2,212 +2,241 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stellaris Research - Cosmic Explorer Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stellaris Research - Cosmic Explorer Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link href="tooplate-stellaris-style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="tooplate-stellaris-style.css" rel="stylesheet">
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
-  <canvas id="starfield"></canvas>
+    <canvas id="starfield"></canvas>
 
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="logo-container">
-        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="35" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6" />
-          <circle cx="50" cy="50" r="20" fill="none" stroke="#f59e0b" stroke-width="2" />
-          <circle cx="50" cy="50" r="12" fill="#7c3aed" />
-          <circle cx="85" cy="50" r="4" fill="#f59e0b">
-            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="8s"
-              repeatCount="indefinite" />
-          </circle>
-          <circle cx="15" cy="50" r="3" fill="#ec4899">
-            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="-360 50 50" dur="12s"
-              repeatCount="indefinite" />
-          </circle>
-          <circle cx="50" cy="50" r="8" fill="#f59e0b" opacity="0.3" />
-        </svg>
-        <span class="logo-text">FINESI</span>
-      </a>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6" />
+                    <circle cx="50" cy="50" r="20" fill="none" stroke="#f59e0b" stroke-width="2" />
+                    <circle cx="50" cy="50" r="12" fill="#7c3aed" />
+                    <circle cx="85" cy="50" r="4" fill="#f59e0b">
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="8s"
+                            repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="15" cy="50" r="3" fill="#ec4899">
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="-360 50 50" dur="12s"
+                            repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="50" cy="50" r="8" fill="#f59e0b" opacity="0.3" />
+                </svg>
+                <span class="logo-text">FINESI</span>
+            </a>
 
-      <div class="mobile-menu-toggle" id="mobile-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-      <div class="nav-menu" id="nav-menu">
-        <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ACERCA</a></li>
-          <li><a href="#equipment">HABILIDADES</a></li>
-          <li><a href="#contact">CONTACTO</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ACERCA</a></li>
+                    <li><a href="#equipment">HABILIDADES</a></li>
+                    <li><a href="#contact">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <section id="home" class="hero">
-    <div class="stars-layer"></div>
-    <div class="space-orb"></div>
-    <div class="space-orb"></div>
-    <div class="space-orb"></div>
-    <div class="space-orb"></div>
+    <section id="home" class="hero">
+        <div class="stars-layer"></div>
+        <div class="space-orb"></div>
+        <div class="space-orb"></div>
+        <div class="space-orb"></div>
+        <div class="space-orb"></div>
 
-    <div class="shooting-star" style="--delay: 0s; --top: 10%; --left: 10%;"></div>
-    <div class="shooting-star" style="--delay: 1.5s; --top: 30%; --left: 60%;"></div>
-    <div class="shooting-star" style="--delay: 3s; --top: 20%; --left: 80%;"></div>
-    <div class="shooting-star" style="--delay: 4.5s; --top: 60%; --left: 30%;"></div>
-    <div class="shooting-star" style="--delay: 6s; --top: 80%; --left: 70%;"></div>
+        <div class="shooting-star" style="--delay: 0s; --top: 10%; --left: 10%;"></div>
+        <div class="shooting-star" style="--delay: 1.5s; --top: 30%; --left: 60%;"></div>
+        <div class="shooting-star" style="--delay: 3s; --top: 20%; --left: 80%;"></div>
+        <div class="shooting-star" style="--delay: 4.5s; --top: 60%; --left: 30%;"></div>
+        <div class="shooting-star" style="--delay: 6s; --top: 80%; --left: 70%;"></div>
 
-    <div class="hero-content">
-      <h1 class="cosmic-title">HENRY CCOARITE DUEÑAS</h1>
-      <p class="subtitle">PROGRAMACION NUMERICA</p>
-    </div>
-
-    <a href="#about" class="scroll-btn">
-      <div class="scroll-btn-inner">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-        </svg>
-      </div>
-    </a>
-  </section>
-
-  <section id="about" class="fade-in">
-    <h2 class="section-title">FACULTAD DE INGENIERIA ESTADISTICA E INFORMATICA</h2>
-    <div class="about-section">
-      <div class="about-hero">
-        <h3>UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO</h3>
-        <p class="about-description">
-          ¿QUE ES LA PROGRAMACION NUMERICA?<br>
-          El proceso de diseñar y escribir código en un lenguaje de programación para implementar algoritmos
-          numéricos que resuelven problemas matemáticos y de ingeniería.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-card">
-          <span class="about-card-icon">🔬</span>
-          <h4>UNIDAD 1</h4>
-          <p>trabajos encargados de programación numérica.<br><strong>DESCARGAR PDFs AQUÍ</strong></p>
-
-          <button class="mission-status open-modal"
-            data-title="ANÁLISIS DE FUNCIÓN MATEMÁTICA MÁXIMO CON DOS VARIABLES."
-            data-desc="Este trabajo presenta el análisis de una función matemática de dos variables utilizando métodos de derivación parcial y optimización numérica."
-            data-file="./files/PROGRAMACION_NUMERICA.pdf"
-            data-codeid="code-t1">Descargar T1</button>
-
-          <button class="mission-status open-modal"
-            data-title="Trabajo 2 - Graficador de Funciones"
-            data-desc="Este documento contiene un script de Python para graficar dos funciones ingresadas por el usuario, mostrando los ejes y los valores calculados."
-            data-file="./files/trabajo2.pdf"
-            data-codeid="code-t2">Descargar T2</button>
+        <div class="hero-content">
+            <h1 class="cosmic-title">HENRY CCOARITE DUEÑAS</h1>
+            <p class="subtitle">PROGRAMACION NUMERICA</p>
         </div>
 
-        <div class="about-card">
-          <span class="about-card-icon">🛰️</span>
-          <h4>UNIDAD 2</h4>
-          <p>trabajos encargados de programacion numerica</p>
-          <a href="#" class="mission-status" download="">descargar</a>
+        <a href="#about" class="scroll-btn">
+            <div class="scroll-btn-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                </svg>
+            </div>
+        </a>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2 class="section-title">FACULTAD DE INGENIERIA ESTADISTICA E INFORMATICA</h2>
+        <div class="about-section">
+            <div class="about-hero">
+                <h3>UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO</h3>
+                <p class="about-description">
+                    ¿QUE ES LA PROGRAMACION NUMERICA?<br>
+                    El proceso de diseñar y escribir código en un lenguaje de programación para implementar algoritmos
+                    numéricos que resuelven problemas matemáticos y de ingeniería.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <span class="about-card-icon">🔬</span>
+                    <h4>UNIDAD 1</h4>
+                    <p>trabajos encargados de programación numérica.<br><strong>DESCARGAR PDFs AQUÍ</strong></p>
+
+                    <button class="mission-status open-modal"
+                        data-title="ANALIZADOR DE FUNCIÓN MATEMÁTICA."
+                        data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+                                Este programa permite ingresar una función matemática simple con un máximo de dos variables. Analiza el texto ingresado para detectar cuáles son las variables utilizadas y cuántas operaciones contiene. Se consideran operaciones las sumas (+), restas (-), multiplicaciones (* y también implícitas como 5x o xy), divisiones (/) y potencias (^). El programa detecta automáticamente si hay más de dos variables e informa un error si se excede ese límite.
+                            </p>
+
+                            <h4 style="color:#a78bfa;">Ejemplo</h4>
+                            <ul style="list-style:none;padding:0;text-align:left;margin:10px 0 0 0;">
+                                <li><strong>Entrada:</strong> 3x + 4y</li>
+                                <li><strong>Salida:</strong></li>
+                                <li style="margin-left:20px;">• Variables: x, y</li>
+                                <li style="margin-left:20px;">• Número de variables: 2</li>
+                                <li style="margin-left:20px;">• Número de operaciones: 3</li>
+                            </ul>
+                            <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
+                            <p style="text-align:left;">• Máximo dos variables distintas.</p>
+                        </div>'
+                        data-file="./files/PROGRAMACION_NUMERICA.pdf"
+                        data-codeid="code-t1">Descargar T1</button>
+
+                    <button class="mission-status open-modal"
+                        data-title="GRAFICADOR DE FUNCIONES"
+                        data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+                                Permite graficar dos funciones ingresadas por el usuario en la variable x. El programa permite graficar en un mismo sistema de coordenadas dos funciones matemáticas en la variable x, representando cada una con un color distinto para diferenciarlas visualmente y mostrando de manera clara los ejes cartesianos con sus divisiones numéricas. Además de la representación gráfica, ofrece un panel lateral donde se listan los pares ordenados (x, y) generados a partir de un valor de paso definido por el usuario, lo que facilita observar cómo cambian los resultados numéricos a medida que varía x. Asimismo, al aceptar expresiones que incluyen operaciones básicas y funciones de la librería math como sin, cos o exp, el graficador puede trabajar con una amplia variedad de expresiones, desde ecuaciones lineales hasta trigonométricas y exponenciales.
+                            </p>
+
+                            <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
+                            <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
+                        </div>'
+                        data-file="./files/trabajo2.pdf"
+                        data-codeid="code-t2">Descargar T2</button>
+                </div>
+
+                <div class="about-card">
+                    <span class="about-card-icon">🛰️</span>
+                    <h4>UNIDAD 2</h4>
+                    <p>trabajos encargados de programacion numerica</p>
+                    <a href="#" class="mission-status" download="">descargar</a>
+                </div>
+
+                <div class="about-card">
+                    <span class="about-card-icon">🌌</span>
+                    <h4>OTROS</h4>
+                    <a href="#" class="mission-status" download="">descargar</a>
+                </div>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-item"><div class="achievement-number">2</div><div class="achievement-label">archivos</div></div>
+                <div class="achievement-item"><div class="achievement-number">0</div><div class="achievement-label">archivos</div></div>
+                <div class="achievement-item"><div class="achievement-number">0</div><div class="achievement-label">archivos</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipment" class="fade-in">
+        <h2 class="section-title">HABILIDADES</h2>
+        <div class="equipment-container">
+            <div class="equipment-item"><span><img class="habilidad" src="img/html.png" alt="html"></span></div>
+            <div class="equipment-item"><span>James Webb</span></div>
+            <div class="equipment-item"><span>Spectroscopy Lab</span></div>
+            <div class="equipment-item"><span>Radio Array</span></div>
+            <div class="equipment-item"><span>AI Analysis</span></div>
+            <div class="equipment-item"><span>Quantum Computing</span></div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">CONTACTO</h2>
+        <form class="contact-form">
+            <div class="form-group"><input type="text" placeholder="Principal Investigator Name" required></div>
+            <div class="form-group"><input type="email" placeholder="Institution Email" required></div>
+            <div class="form-group"><textarea rows="5" placeholder="Research Proposal or Collaboration Inquiry" required></textarea></div>
+            <button type="submit" class="launch-btn">SUBMIT PROPOSAL</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Research Areas</h3>
+                <ul>
+                    <li><a href="#">Exoplanet Discovery</a></li>
+                    <li><a href="#">Astrobiology</a></li>
+                    <li><a href="#">Atmospheric Analysis</a></li>
+                    <li><a href="#">SETI Research</a></li>
+                    <li><a href="#">Space Technology</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Publications</h3>
+                <ul>
+                    <li><a href="#">Nature Astronomy</a></li>
+                    <li><a href="#">Astrophysical Journal</a></li>
+                    <li><a href="#">Science Magazine</a></li>
+                    <li><a href="#">Research Papers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <p style="color: var(--star-silver); margin-bottom: 15px;">Contactame atravez de estos medios</p>
+                <div class="social-links">
+                    <a href="#" aria-label="ResearchGate"><i class="social fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="NASA Collaboration"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82"/></svg></a>
+                    <a href="#" aria-label="Academic Network"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8m0 2a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6"/></svg></a>
+                </div>
+            </div>
         </div>
 
-        <div class="about-card">
-          <span class="about-card-icon">🌌</span>
-          <h4>OTROS</h4>
-          <a href="#" class="mission-status" download="">descargar</a>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Henry Ccoarite Dueñas - myPortfolio. Design</p>
         </div>
-      </div>
+    </footer>
 
-      <div class="achievements-grid">
-        <div class="achievement-item"><div class="achievement-number">2</div><div class="achievement-label">archivos</div></div>
-        <div class="achievement-item"><div class="achievement-number">0</div><div class="achievement-label">archivos</div></div>
-        <div class="achievement-item"><div class="achievement-number">0</div><div class="achievement-label">archivos</div></div>
-      </div>
-    </div>
-  </section>
+    <script type="text/plain" id="code-t1">
+import tkinter as tk
+from tkinter import messagebox
 
-  <section id="equipment" class="fade-in">
-    <h2 class="section-title">HABILIDADES</h2>
-    <div class="equipment-container">
-      <div class="equipment-item"><span><img class="habilidad" src="img/html.png" alt="html"></span></div>
-      <div class="equipment-item"><span>James Webb</span></div>
-      <div class="equipment-item"><span>Spectroscopy Lab</span></div>
-      <div class="equipment-item"><span>Radio Array</span></div>
-      <div class="equipment-item"><span>AI Analysis</span></div>
-      <div class="equipment-item"><span>Quantum Computing</span></div>
-    </div>
-  </section>
-
-  <section id="contact" class="fade-in">
-    <h2 class="section-title">CONTACTO</h2>
-    <form class="contact-form">
-      <div class="form-group"><input type="text" placeholder="Principal Investigator Name" required></div>
-      <div class="form-group"><input type="email" placeholder="Institution Email" required></div>
-      <div class="form-group"><textarea rows="5" placeholder="Research Proposal or Collaboration Inquiry" required></textarea></div>
-      <button type="submit" class="launch-btn">SUBMIT PROPOSAL</button>
-    </form>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Research Areas</h3>
-        <ul>
-          <li><a href="#">Exoplanet Discovery</a></li>
-          <li><a href="#">Astrobiology</a></li>
-          <li><a href="#">Atmospheric Analysis</a></li>
-          <li><a href="#">SETI Research</a></li>
-          <li><a href="#">Space Technology</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Publications</h3>
-        <ul>
-          <li><a href="#">Nature Astronomy</a></li>
-          <li><a href="#">Astrophysical Journal</a></li>
-          <li><a href="#">Science Magazine</a></li>
-          <li><a href="#">Research Papers</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Redes Sociales</h3>
-        <p style="color: var(--star-silver); margin-bottom: 15px;">Contactame atravez de estos medios</p>
-        <div class="social-links">
-          <a href="#" aria-label="ResearchGate"><i class="social fa-brands fa-facebook"></i></a>
-          <a href="#" aria-label="NASA Collaboration"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82"/></svg></a>
-          <a href="#" aria-label="Academic Network"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8m0 2a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2025 Henry Ccoarite Dueñas - myPortfolio. Design</p>
-    </div>
-  </footer>
-
-  <script type="text/plain" id="code-t1">
-def analizar_funcion(funcion):
-    funcion = funcion.replace(" ", "")
+def analizar_funcion():
+    funcion = entrada.get().replace(" ", "")
     var1 = ""
     var2 = ""
     num_vars = 0
     operaciones = 0
     i = 0
+    
     while i < len(funcion):
         c = funcion[i]
+
         if c.isalpha():
             if var1 == "":
                 var1 = c
@@ -216,34 +245,63 @@ def analizar_funcion(funcion):
                 var2 = c
                 num_vars += 1
             elif c != var1 and c != var2:
-                print("Error: más de dos variables detectadas.")
+                messagebox.showerror("Error", "Más de dos variables detectadas.")
                 return
+        
         if c in "+-*/^":
             operaciones += 1
+
         if i < len(funcion) - 1:
             sig = funcion[i + 1]
+
             if c.isdigit() and sig.isalpha():
                 operaciones += 1
             elif c.isalpha() and sig.isalpha():
                 operaciones += 1
             elif (c.isalpha() or c.isdigit()) and sig == "(":
                 operaciones += 1
+
         i += 1
+
     if var2 != "":
         vars_text = f"{var1}, {var2}"
     else:
         vars_text = var1
-    print(f"Variables: {vars_text}")
-    print(f"Número de variables: {num_vars}")
-    print(f"Número de operaciones: {operaciones}")
 
-funcion = input("Ingrese la función matemática: ")
-analizar_funcion(funcion)
-  </script>
+    resultado_var.config(text=f"Variables: {vars_text}")
+    resultado_num_var.config(text=f"Número de variables: {num_vars}")
+    resultado_op.config(text=f"Número de operaciones: {operaciones}")
 
-  <script type="text/plain" id="code-t2">
+
+ventana = tk.Tk()
+ventana.title("Analizador Función Matemática")
+ventana.geometry("420x230")
+ventana.resizable(False, False)
+
+tk.Label(ventana, text="Ingrese la función matemática:", font=("Arial", 12)).pack(pady=10)
+
+entrada = tk.Entry(ventana, font=("Arial", 14), justify="center")
+entrada.pack(padx=20, fill="x")
+
+btn_analizar = tk.Button(ventana, text="Analizar", font=("Arial", 12), bg="green", fg="white", command=analizar_funcion)
+btn_analizar.pack(pady=10)
+
+resultado_var = tk.Label(ventana, text="Variables:", font=("Arial", 12))
+resultado_var.pack()
+
+resultado_num_var = tk.Label(ventana, text="Número de variables:", font=("Arial", 12))
+resultado_num_var.pack()
+
+resultado_op = tk.Label(ventana, text="Número de operaciones:", font=("Arial", 12))
+resultado_op.pack()
+
+ventana.mainloop()
+    </script>
+
+    <script type="text/plain" id="code-t2">
+import tkinter as tk
 import math
-import matplotlib.pyplot as plt
+from tkinter import messagebox
 
 def evaluar(expr: str, x: float):
     try:
@@ -251,132 +309,175 @@ def evaluar(expr: str, x: float):
     except Exception:
         return None
 
-def dibujar_ejes(ax, ancho, alto, escala):
-    ax.axhline(0, color='black', linewidth=1)
-    ax.axvline(0, color='black', linewidth=1)
+def dibujar_ejes(canvas, ancho, alto, escala):
+    cx, cy = ancho // 2, alto // 2
+    
+    canvas.create_line(0, cy, ancho, cy, fill="black")
+    canvas.create_line(cx, 0, cx, alto, fill="black")
 
-    # Marcas en los ejes
-    for i in range(-int(ancho // (2 * escala)), int(ancho // (2 * escala)) + 1):
-        ax.plot([i, i], [-0.1, 0.1], color='black', linewidth=0.8)
+    for i in range(-ancho // (2 * escala), ancho // (2 * escala) + 1):
+        x = cx + i * escala
+        canvas.create_line(x, cy - 3, x, cy + 3, fill="black")
         if i != 0:
-            ax.text(i, -0.3, str(i), fontsize=8, ha='center')
-
-    for j in range(-int(alto // (2 * escala)), int(alto // (2 * escala)) + 1):
-        ax.plot([-0.1, 0.1], [j, j], color='black', linewidth=0.8)
+            canvas.create_text(x, cy + 12, text=str(i), font=("Arial", 7))
+    
+    for j in range(-alto // (2 * escala), alto // (2 * escala) + 1):
+        y = cy - j * escala
+        canvas.create_line(cx - 3, y, cx + 3, y, fill="black")
         if j != 0:
-            ax.text(-0.3, j, str(j), fontsize=8, va='center')
+            canvas.create_text(cx - 12, y, text=str(j), font=("Arial", 7))
 
-def trazar_funcion(ax, expr, color, escala, paso):
-    x_vals = []
-    y_vals = []
 
-    print(f"\nValores de {expr}:\n")
+def trazar_funcion(canvas, salida, expr, color, ancho, alto, escala, paso):
+    cx, cy = ancho // 2, alto // 2
+    puntos = []
+    salida.insert(tk.END, f"\nValores de {expr}:\n")
 
     for x in range(-200, 201, paso):
         x_real = x / 10
         y_real = evaluar(expr, x_real)
+        
         if y_real is not None:
-            x_vals.append(x_real)
-            y_vals.append(y_real)
-            print(f"x={x_real:.1f}, y={y_real:.2f}")
-
-    if len(x_vals) > 1:
-        ax.plot(x_vals, y_vals, color=color, linewidth=2, label=expr)
+            px = cx + x_real * escala
+            py = cy - y_real * escala
+            puntos.append((px, py))
+            salida.insert(tk.END, f"x={x_real:.1f}, y={y_real:.2f}\n")
+            
+    if len(puntos) > 1:
+        canvas.create_line(puntos, fill=color, width=2, smooth=True)
 
 def graficar():
-    ancho, alto = 20, 20
-    escala = 1
-    paso = int(input("Ingrese el paso (ej: 5): "))
+    
+    try:
+        paso = int(entrada_paso.get())
+        if paso <= 0:
+            messagebox.showerror("Error", "El paso debe ser un entero positivo.")
+            return
+    except ValueError:
+        messagebox.showerror("Error", "El paso debe ser un número entero.")
+        return
+    
+    canvas.delete("all")
+    salida.delete("1.0", tk.END)
+    
+    ancho, alto = 800, 600
+    escala = 30 
+    
+    dibujar_ejes(canvas, ancho, alto, escala)
+    
+    f1 = entradal.get()
+    f2 = entrada2.get()
+    
+    trazar_funcion(canvas, salida, f1, "red", ancho, alto, escala, paso)
+    trazar_funcion(canvas, salida, f2, "blue", ancho, alto, escala, paso)
 
-    f1 = input("Ingrese la función 1 (ej: 2*x+3): ")
-    f2 = input("Ingrese la función 2 (ej: -x+2): ")
 
-    fig, ax = plt.subplots(figsize=(8, 6))
-    dibujar_ejes(ax, ancho, alto, escala)
+root = tk.Tk()
+root.title("Graficador de Funciones")
 
-    trazar_funcion(ax, f1, "red", escala, paso)
-    trazar_funcion(ax, f2, "blue", escala, paso)
+panel = tk.Frame(root, padx=10, pady=10)
+panel.pack()
 
-    ax.legend()
-    ax.grid(True, linestyle='--', linewidth=0.5)
-    plt.title("Graficador de Funciones")
-    plt.xlabel("x")
-    plt.ylabel("y")
-    plt.show()
+tk.Label(panel, text="Función 1 (ej: 2*x+3)").grid(row=0, column=0, sticky="w")
+entradal = tk.Entry(panel, width=25)
+entradal.insert(0, "2*x+3")
+entradal.grid(row=0, column=1, padx=5)
 
-graficar()
-  </script>
+tk.Label(panel, text="Función 2 (ej: -x+2)").grid(row=1, column=0, sticky="w")
+entrada2 = tk.Entry(panel, width=25)
+entrada2.insert(0, "-x+2")
+entrada2.grid(row=1, column=1, padx=5)
 
-  <script src="tooplate-stellaris-script.js"></script>
-  <script src="https://kit.fontawesome.com/10581f7c6f.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+tk.Label(panel, text="Paso (ej: 5)").grid(row=2, column=0, sticky="w")
+entrada_paso = tk.Entry(panel, width=10)
+entrada_paso.insert(0, "5")
+entrada_paso.grid(row=2, column=1, sticky="w")
 
-  <script>
-    function mostrarDescripcion(titulo, descripcion, enlace, codigo) {
-      const fondo = document.createElement('div');
-      fondo.style = `
-        position:fixed;top:0;left:0;width:100%;height:100%;
-        background:rgba(10,10,25,0.9);display:flex;align-items:center;justify-content:center;
-        z-index:9999;backdrop-filter:blur(5px);
-      `;
-      const modal = document.createElement('div');
-      modal.style = `
-        background:rgba(20,20,40,0.95);color:#e0e7ff;padding:30px;border-radius:20px;
-        width:560px;max-width:95vw;
-        max-height: 90vh; /* Permite que el modal no sea más alto que la pantalla */
-        overflow-y: auto; /* Habilita la barra de desplazamiento vertical (scroll) */
-        box-shadow:0 0 25px rgba(139,92,246,0.45);
-        font-family:'Space Grotesk',sans-serif;text-align:center;animation:fadeIn 0.28s ease;
-      `;
-      modal.innerHTML = `
-        <h2 style="color:#a78bfa;font-family:Orbitron,sans-serif;margin-bottom:8px;">${titulo}</h2>
-        <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">${descripcion}</p>
-        <div style="text-align:left;">
-          <pre style="border-radius:10px;overflow:auto;padding:12px;background:#111827;"><code class="language-python"></code></pre>
-        </div>
-        <div style="display:flex;gap:10px;justify-content:center;margin-top:16px;">
-          <button id="copiar-btn" style="background:#10b981;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">Copiar código</button>
-          <button id="descargar-btn" style="background:#7c3aed;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600;">Descargar</button>
-          <button id="cerrar-btn" style="background:#4b5563;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">Cerrar</button>
-        </div>
-      `;
-      fondo.appendChild(modal);
-      document.body.appendChild(fondo);
-      const codeElem = modal.querySelector('pre code');
-      codeElem.textContent = codigo;
-      if (window.hljs) hljs.highlightElement(codeElem);
-      document.getElementById('cerrar-btn').onclick = () => fondo.remove();
-      document.getElementById('descargar-btn').onclick = () => {
-        const a = document.createElement('a');
-        a.href = enlace;
-        a.download = enlace.split('/').pop();
-        a.click();
-      };
-      document.getElementById('copiar-btn').onclick = () => {
-        navigator.clipboard.writeText(codigo).then(() => alert('✅ Código copiado'));
-      };
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.open-modal').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const titulo = btn.dataset.title || '';
-          const descripcion = btn.dataset.desc || '';
-          const enlace = btn.dataset.file || '#';
-          const codeId = btn.dataset.codeid;
-          const codigo = codeId ? (document.getElementById(codeId)?.textContent || '') : '';
-          mostrarDescripcion(titulo, descripcion, enlace, codigo);
+tk.Button(panel, text="Graficar", command=graficar).grid(row=3, column=0, columnspan=2, pady=8)
+
+canvas = tk.Canvas(root, width=800, height=600, bg="white")
+canvas.pack(side="left")
+
+salida = tk.Text(root, width=40, height=35)
+salida.pack(side="right")
+
+root.mainloop()
+    </script>
+
+    <script src="tooplate-stellaris-script.js"></script>
+    <script src="https://kit.fontawesome.com/10581f7c6f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+
+    <script>
+        function mostrarDescripcion(titulo, descripcion, enlace, codigo) {
+            const fondo = document.createElement('div');
+            fondo.style = `
+                position:fixed;top:0;left:0;width:100%;height:100%;
+                background:rgba(10,10,25,0.9);display:flex;align-items:center;justify-content:center;
+                z-index:9999;backdrop-filter:blur(5px);
+            `;
+            const modal = document.createElement('div');
+            modal.style = `
+                background:rgba(20,20,40,0.95);color:#e0e7ff;padding:30px;border-radius:20px;
+                width:560px;max-width:95vw;
+                max-height: 90vh; 
+                overflow-y: auto; 
+                box-shadow:0 0 25px rgba(139,92,246,0.45);
+                font-family:'Space Grotesk',sans-serif;text-align:center;animation:fadeIn 0.28s ease;
+            `;
+            modal.innerHTML = `
+                <h2 style="color:#a78bfa;font-family:Orbitron,sans-serif;margin-bottom:8px;">${titulo}</h2>
+                <div style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">${descripcion}</div>
+                <div style="text-align:left;">
+                    <pre style="border-radius:10px;overflow:auto;padding:12px;background:var(--hljs-background, #282c34);"><code class="language-python"></code></pre>
+                </div>
+                <div style="display:flex;gap:10px;justify-content:center;margin-top:16px;">
+                    <button id="copiar-btn" style="background:#10b981;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">Copiar código</button>
+                    <button id="descargar-btn" style="background:#7c3aed;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600;">Descargar</button>
+                    <button id="cerrar-btn" style="background:#4b5563;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">Cerrar</button>
+                </div>
+            `;
+            fondo.appendChild(modal);
+            document.body.appendChild(fondo);
+            const codeElem = modal.querySelector('pre code');
+            codeElem.textContent = codigo;
+            
+            // ¡REACTIVACIÓN DEL RESALTADO DE SINTAXIS!
+            if (window.hljs) hljs.highlightElement(codeElem); 
+            
+            document.getElementById('cerrar-btn').onclick = () => fondo.remove();
+            document.getElementById('descargar-btn').onclick = () => {
+                const a = document.createElement('a');
+                a.href = enlace;
+                a.download = enlace.split('/').pop();
+                a.click();
+            };
+            document.getElementById('copiar-btn').onclick = () => {
+                navigator.clipboard.writeText(codigo).then(() => alert('✅ Código copiado'));
+            };
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.open-modal').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const titulo = btn.dataset.title || '';
+                    const descripcion = btn.dataset.desc || '';
+                    const enlace = btn.dataset.file || '#';
+                    const codeId = btn.dataset.codeid;
+                    const codigo = codeId ? (document.getElementById(codeId)?.textContent || '') : '';
+                    mostrarDescripcion(titulo, descripcion, enlace, codigo);
+                });
+            });
         });
-      });
-    });
-  </script>
+    </script>
 
-  <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.96); }
-      to { opacity: 1; transform: scale(1); }
-    }
-  </style>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
 
 </body>
+
 </html>
