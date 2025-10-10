@@ -32,8 +32,8 @@
                             repeatCount="indefinite" />
                     </circle>
                     <circle cx="15" cy="50" r="3" fill="#ec4899">
-                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="-360 50 50" dur="12s"
-                            repeatCount="indefinite" />
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="-360 50 50"
+                            dur="12s" repeatCount="indefinite" />
                     </circle>
                     <circle cx="50" cy="50" r="8" fill="#f59e0b" opacity="0.3" />
                 </svg>
@@ -74,8 +74,8 @@
             <h1 class="cosmic-title">HENRY CCOARITE DUEÑAS</h1>
             <p class="subtitle">PROGRAMACION NUMERICA</p>
             <p>
-  ing: <small>Fred Torres Cruz</small>
-</p>
+                ing: <small>Fred Torres Cruz</small>
+            </p>
 
         </div>
 
@@ -94,18 +94,23 @@
             <div class="about-hero">
                 <h3>UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO</h3>
                 <p class="about-description">
-                    <div>
-    <p>
-        La <strong>Programación Numérica</strong> es una disciplina dentro de la informática y las matemáticas aplicadas que se centra en el diseño, análisis e implementación de algoritmos que utilizan la <strong>aproximación numérica</strong> para resolver problemas de análisis matemático.
-    </p>
-    <p>
-        En términos sencillos:
-    </p>  
-        <li>
-            <strong>Algoritmos:</strong> Estos métodos se traducen en algoritmos que, al ejecutarse en una computadora, realizan repetidos cálculos (iteraciones) hasta alcanzar un nivel de precisión aceptable o un criterio de convergencia definido.
-        </li>
-    </ul>
-</div>
+                <div>
+                    <p>
+                        La <strong>Programación Numérica</strong> es una disciplina dentro de la informática y las
+                        matemáticas aplicadas que se centra en el diseño, análisis e implementación de algoritmos que
+                        utilizan la <strong>aproximación numérica</strong> para resolver problemas de análisis
+                        matemático.
+                    </p>
+                    <p>
+                        En términos sencillos:
+                    </p>
+                    <li>
+                        <strong>Algoritmos:</strong> Estos métodos se traducen en algoritmos que, al ejecutarse en una
+                        computadora, realizan repetidos cálculos (iteraciones) hasta alcanzar un nivel de precisión
+                        aceptable o un criterio de convergencia definido.
+                    </li>
+                    </ul>
+                </div>
                 </p>
             </div>
 
@@ -114,10 +119,9 @@
                     <span class="about-card-icon">🔬</span>
                     <h4>UNIDAD 1</h4>
                     <p>trabajos encargados de programación numérica.<br><strong>DESCARGAR PDFs AQUÍ</strong></p>
-
-                    <button class="mission-status open-modal"
-                        data-title="ANALIZADOR DE FUNCIÓN MATEMÁTICA."
-                        data-desc='<div>
+                    <div class="btn-modal">
+                        <button class="mission-status open-modal" data-title="ANALIZADOR DE FUNCIÓN MATEMÁTICA."
+                            data-desc='<div>
                             <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
                             <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
                                 Este programa permite ingresar una función matemática simple con un máximo de dos variables. Analiza el texto ingresado para detectar cuáles son las variables utilizadas y cuántas operaciones contiene. Se consideran operaciones las sumas (+), restas (-), multiplicaciones (* y también implícitas como 5x o xy), divisiones (/) y potencias (^). El programa detecta automáticamente si hay más de dos variables e informa un error si se excede ese límite.
@@ -133,13 +137,11 @@
                             </ul>
                             <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
                             <p style="text-align:left;">• Máximo dos variables distintas.</p>
-                        </div>'
-                        data-file="./files/PROGRAMACION_NUMERICA.pdf"
-                        data-codeid="code-t1">T1: RECONOCER FUNCIONES</button>
-
-                    <button class="mission-status open-modal"
-                        data-title="GRAFICADOR DE FUNCIONES"
-                        data-desc='<div>
+                        </div>' data-file="./files/PROGRAMACION_NUMERICA.pdf" data-codeid="code-t1">T1: RECONOCER
+                            FUNCIONES</button>
+                    </div>
+                    <div class="btn-modal">
+                        <button class="mission-status open-modal" data-title="GRAFICADOR DE FUNCIONES" data-desc='<div>
                             <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
                             <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
                                 Permite graficar dos funciones ingresadas por el usuario en la variable x. El programa permite graficar en un mismo sistema de coordenadas dos funciones matemáticas en la variable x, representando cada una con un color distinto para diferenciarlas visualmente y mostrando de manera clara los ejes cartesianos con sus divisiones numéricas. Además de la representación gráfica, ofrece un panel lateral donde se listan los pares ordenados (x, y) generados a partir de un valor de paso definido por el usuario, lo que facilita observar cómo cambian los resultados numéricos a medida que varía x. Asimismo, al aceptar expresiones que incluyen operaciones básicas y funciones de la librería math como sin, cos o exp, el graficador puede trabajar con una amplia variedad de expresiones, desde ecuaciones lineales hasta trigonométricas y exponenciales.
@@ -147,9 +149,31 @@
 
                             <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
                             <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
-                        </div>'
-                        data-file="./files/trabajo2.pdf"
-                        data-codeid="code-t2">T2: GRAFICADOR DE FUNCIONES</button>
+                        </div>' data-file="./files/trabajo2.pdf" data-codeid="code-t2">T2: GRAFICADOR DE
+                            FUNCIONES</button>
+                    </div>  
+                    <div class="btn-modal">
+                        <button class="mission-status open-modal" data-title="GRAFICADOR DE FUNCIONES" data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+                                Permite graficar dos funciones ingresadas por el usuario en la variable x. El programa permite graficar en un mismo sistema de coordenadas dos funciones matemáticas en la variable x, representando cada una con un color distinto para diferenciarlas visualmente y mostrando de manera clara los ejes cartesianos con sus divisiones numéricas. Además de la representación gráfica, ofrece un panel lateral donde se listan los pares ordenados (x, y) generados a partir de un valor de paso definido por el usuario, lo que facilita observar cómo cambian los resultados numéricos a medida que varía x. Asimismo, al aceptar expresiones que incluyen operaciones básicas y funciones de la librería math como sin, cos o exp, el graficador puede trabajar con una amplia variedad de expresiones, desde ecuaciones lineales hasta trigonométricas y exponenciales.
+                            </p>
+
+                            <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
+                            <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
+                        </div>' data-file="./files/RESTRICIONES Y SISTEMAS DE ECUACIONES....TR3.pdf" data-codeid="code-t2">T3: RESTRICCIONES Y SISTEMAS DE ECUACIONES</button>
+                    </div>
+                    <div class="btn-modal">
+                        <button class="mission-status open-modal" data-title="GRAFICADOR DE FUNCIONES" data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+                                Permite graficar dos funciones ingresadas por el usuario en la variable x. El programa permite graficar en un mismo sistema de coordenadas dos funciones matemáticas en la variable x, representando cada una con un color distinto para diferenciarlas visualmente y mostrando de manera clara los ejes cartesianos con sus divisiones numéricas. Además de la representación gráfica, ofrece un panel lateral donde se listan los pares ordenados (x, y) generados a partir de un valor de paso definido por el usuario, lo que facilita observar cómo cambian los resultados numéricos a medida que varía x. Asimismo, al aceptar expresiones que incluyen operaciones básicas y funciones de la librería math como sin, cos o exp, el graficador puede trabajar con una amplia variedad de expresiones, desde ecuaciones lineales hasta trigonométricas y exponenciales.
+                            </p>
+
+                            <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
+                            <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
+                        </div>' data-file="./files/NEWTON_RAPHSON.pdf" data-codeid="code-t2">T4: METODO NEWTON RAPHSON</button>
+                    </div>
                 </div>
 
                 <div class="about-card">
@@ -167,9 +191,18 @@
             </div>
 
             <div class="achievements-grid">
-                <div class="achievement-item"><div class="achievement-number">2</div><div class="achievement-label">archivos</div></div>
-                <div class="achievement-item"><div class="achievement-number">0</div><div class="achievement-label">archivos</div></div>
-                <div class="achievement-item"><div class="achievement-number">0</div><div class="achievement-label">archivos</div></div>
+                <div class="achievement-item">
+                    <div class="achievement-number">2</div>
+                    <div class="achievement-label">archivos</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">0</div>
+                    <div class="achievement-label">archivos</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">0</div>
+                    <div class="achievement-label">archivos</div>
+                </div>
             </div>
         </div>
     </section>
@@ -191,7 +224,8 @@
         <form class="contact-form">
             <div class="form-group"><input type="text" placeholder="Principal Investigator Name" required></div>
             <div class="form-group"><input type="email" placeholder="Institution Email" required></div>
-            <div class="form-group"><textarea rows="5" placeholder="Research Proposal or Collaboration Inquiry" required></textarea></div>
+            <div class="form-group"><textarea rows="5" placeholder="Research Proposal or Collaboration Inquiry"
+                    required></textarea></div>
             <button type="submit" class="launch-btn">SUBMIT PROPOSAL</button>
         </form>
     </section>
@@ -224,8 +258,15 @@
                 <p style="color: var(--star-silver); margin-bottom: 15px;">Contactame atravez de estos medios</p>
                 <div class="social-links">
                     <a href="#" aria-label="ResearchGate"><i class="social fa-brands fa-facebook"></i></a>
-                    <a href="#" aria-label="NASA Collaboration"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82"/></svg></a>
-                    <a href="#" aria-label="Academic Network"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8m0 2a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6"/></svg></a>
+                    <a href="#" aria-label="NASA Collaboration"><svg width="20" height="20" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82" />
+                        </svg></a>
+                    <a href="#" aria-label="Academic Network"><svg width="20" height="20" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8m0 2a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6" />
+                        </svg></a>
                 </div>
             </div>
         </div>
@@ -455,10 +496,10 @@ root.mainloop()
             document.body.appendChild(fondo);
             const codeElem = modal.querySelector('pre code');
             codeElem.textContent = codigo;
-            
+
             // ¡REACTIVACIÓN DEL RESALTADO DE SINTAXIS!
-            if (window.hljs) hljs.highlightElement(codeElem); 
-            
+            if (window.hljs) hljs.highlightElement(codeElem);
+
             document.getElementById('cerrar-btn').onclick = () => fondo.remove();
             document.getElementById('descargar-btn').onclick = () => {
                 const a = document.createElement('a');
@@ -486,8 +527,15 @@ root.mainloop()
 
     <style>
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.96); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     </style>
 
