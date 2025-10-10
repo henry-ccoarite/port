@@ -1,14 +1,4 @@
-/*
 
-Tooplate 2140 Stellaris Research
-
-https://www.tooplate.com/view/2140-stellaris-research
-
-*/
-
-// JavaScript Document
-
-// Starfield Background Animation
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
         let stars = [];
@@ -234,3 +224,4 @@ https://www.tooplate.com/view/2140-stellaris-research
             this.classList.add('active');
         });
     });
+
