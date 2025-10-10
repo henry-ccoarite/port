@@ -151,17 +151,6 @@
                             <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
                         </div>' data-file="./files/trabajo2.pdf" data-codeid="code-t2">T2: GRAFICADOR DE
                             FUNCIONES</button>
-                    </div>  
-                    <div class="btn-modal">
-                        <button class="mission-status open-modal" data-title="GRAFICADOR DE FUNCIONES" data-desc='<div>
-                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
-                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
-                                Permite graficar dos funciones ingresadas por el usuario en la variable x. El programa permite graficar en un mismo sistema de coordenadas dos funciones matemáticas en la variable x, representando cada una con un color distinto para diferenciarlas visualmente y mostrando de manera clara los ejes cartesianos con sus divisiones numéricas. Además de la representación gráfica, ofrece un panel lateral donde se listan los pares ordenados (x, y) generados a partir de un valor de paso definido por el usuario, lo que facilita observar cómo cambian los resultados numéricos a medida que varía x. Asimismo, al aceptar expresiones que incluyen operaciones básicas y funciones de la librería math como sin, cos o exp, el graficador puede trabajar con una amplia variedad de expresiones, desde ecuaciones lineales hasta trigonométricas y exponenciales.
-                            </p>
-
-                            <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
-                            <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
-                        </div>' data-file="./files/RESTRICIONES Y SISTEMAS DE ECUACIONES....TR3.pdf" data-codeid="code-t2">T3: RESTRICCIONES Y SISTEMAS DE ECUACIONES</button>
                     </div>
                     <div class="btn-modal">
                         <button class="mission-status open-modal" data-title="GRAFICADOR DE FUNCIONES" data-desc='<div>
@@ -172,7 +161,20 @@
 
                             <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
                             <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
-                        </div>' data-file="./files/NEWTON_RAPHSON.pdf" data-codeid="code-t2">T4: METODO NEWTON RAPHSON</button>
+                        </div>' data-file="./files/RESTRICIONES Y SISTEMAS DE ECUACIONES....TR3.pdf"
+                            data-codeid="code-t3">T3: RESTRICCIONES Y SISTEMAS DE ECUACIONES</button>
+                    </div>
+                    <div class="btn-modal">
+                        <button class="mission-status open-modal" data-title="GRAFICADOR DE FUNCIONES" data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+                                Permite graficar dos funciones ingresadas por el usuario en la variable x. El programa permite graficar en un mismo sistema de coordenadas dos funciones matemáticas en la variable x, representando cada una con un color distinto para diferenciarlas visualmente y mostrando de manera clara los ejes cartesianos con sus divisiones numéricas. Además de la representación gráfica, ofrece un panel lateral donde se listan los pares ordenados (x, y) generados a partir de un valor de paso definido por el usuario, lo que facilita observar cómo cambian los resultados numéricos a medida que varía x. Asimismo, al aceptar expresiones que incluyen operaciones básicas y funciones de la librería math como sin, cos o exp, el graficador puede trabajar con una amplia variedad de expresiones, desde ecuaciones lineales hasta trigonométricas y exponenciales.
+                            </p>
+
+                            <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
+                            <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
+                        </div>' data-file="./files/NEWTON_RAPHSON.pdf" data-codeid="code-t4">T4: METODO NEWTON
+                            RAPHSON</button>
                     </div>
                 </div>
 
@@ -275,7 +277,6 @@
             <p>&copy; 2025 Henry Ccoarite Dueñas - myPortfolio. Design</p>
         </div>
     </footer>
-
     <script type="text/plain" id="code-t1">
 import tkinter as tk
 from tkinter import messagebox
@@ -349,8 +350,9 @@ resultado_num_var.pack()
 resultado_op = tk.Label(ventana, text="Número de operaciones:", font=("Arial", 12))
 resultado_op.pack()
 
-ventana.mainloop()
-    </script>
+ventana.mainloop()    
+</script>
+
 
     <script type="text/plain" id="code-t2">
 import tkinter as tk
@@ -456,7 +458,99 @@ salida = tk.Text(root, width=40, height=35)
 salida.pack(side="right")
 
 root.mainloop()
-    </script>
+</script>
+    <script type="text/plain" id="code-t3">
+import tkinter as tk
+import math
+from tkinter import messagebox
+//nuevo 3
+def evaluar(expr: str, x: float):
+    try:
+        return eval(expr, {"x": x, "math": math, "__builtins__": {}})
+    except Exception:
+        return None
+
+def dibujar_ejes(canvas, ancho, alto, escala):
+    cx, cy = ancho // 2, alto // 2
+    canvas.create_line(0, cy, ancho, cy, fill="black")
+    canvas.create_line(cx, 0, cx, alto, fill="black")
+
+def trazar_funcion(canvas, expr, color, ancho, alto, escala, paso):
+    cx, cy = ancho // 2, alto // 2
+    puntos = []
+    
+    for x in range(-200, 201, paso):
+        x_real = x / 10
+        y_real = evaluar(expr, x_real)
+        
+        if y_real is not None:
+            px = cx + x_real * escala
+            py = cy - y_real * escala
+            puntos.append((px, py))
+            
+    if len(puntos) > 1:
+        canvas.create_line(puntos, fill=color, width=2, smooth=True)
+
+def graficar():
+    canvas.delete("all")
+    ancho, alto, escala, paso = 800, 600, 30, 5
+    dibujar_ejes(canvas, ancho, alto, escala)
+    trazar_funcion(canvas, entradal.get(), "red", ancho, alto, escala, paso)
+    trazar_funcion(canvas, entrada2.get(), "blue", ancho, alto, escala, paso)
+
+
+root = tk.Tk()
+root.title("Graficador de Funciones")
+
+panel = tk.Frame(root, padx=10, pady=10)
+panel.pack()
+
+tk.Label(panel, text="Función 1:").grid(row=0, column=0)
+entradal = tk.Entry(panel, width=25)
+entradal.insert(0, "2*x+3")
+entradal.grid(row=0, column=1)
+
+tk.Label(panel, text="Función 2:").grid(row=1, column=0)
+entrada2 = tk.Entry(panel, width=25)
+entrada2.insert(0, "-x+2")
+entrada2.grid(row=1, column=1)
+
+tk.Button(panel, text="Graficar", command=graficar).grid(row=2, column=0, columnspan=2)
+
+canvas = tk.Canvas(root, width=800, height=600, bg="white")
+canvas.pack()
+
+root.mainloop()
+</script>
+    <script type="text/plain" id="code-t4">
+import sympy as sp
+from math import pi
+
+def NewtonRaphson(x0, tol, n):
+    x = sp.symbols('x')
+    f = input('Digite la funcion (con variable x): ')
+    f = sp.sympify(f)
+    df = sp.diff(f)
+
+    f = sp.lambdify(x, f)
+    df = sp.lambdify(x, df)
+    
+    x1 = 0 
+    for k in range(n):
+        x1 = x0 - f(x0) / df(x0)
+        
+        print('x', k + 1, '=', x1)
+        
+        if abs(x1 - x0) < tol:
+            print('Es una buena aproximacion de la raiz')
+            return
+        
+        x0 = x1
+    
+    print('La raiz aproximada despues de', n, 'iteraciones es:', x1)
+
+NewtonRaphson(pi, 0.000001, 10)
+</script>
 
     <script src="tooplate-stellaris-script.js"></script>
     <script src="https://kit.fontawesome.com/10581f7c6f.js" crossorigin="anonymous"></script>
@@ -481,6 +575,7 @@ root.mainloop()
                 font-family:'Space Grotesk',sans-serif;text-align:center;animation:fadeIn 0.28s ease;
             `;
             modal.innerHTML = `
+                <div style="display:flex;justify-content:end;"> <button id="btn-cerrar" style="position:fixed;background-color:#d41e2b;color:#fff;border:none;font-size:35px;padding:0px 8px;border-radius:8px;cursor:pointer;;">x</button></div>
                 <h2 style="color:#a78bfa;font-family:Orbitron,sans-serif;margin-bottom:8px;">${titulo}</h2>
                 <div style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">${descripcion}</div>
                 <div style="text-align:left;">
@@ -499,8 +594,8 @@ root.mainloop()
 
             // ¡REACTIVACIÓN DEL RESALTADO DE SINTAXIS!
             if (window.hljs) hljs.highlightElement(codeElem);
-
             document.getElementById('cerrar-btn').onclick = () => fondo.remove();
+            document.getElementById('btn-cerrar').onclick = () => fondo.remove();
             document.getElementById('descargar-btn').onclick = () => {
                 const a = document.createElement('a');
                 a.href = enlace;
