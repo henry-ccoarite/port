@@ -15,17 +15,14 @@ function submitForm(){
     // Initiate Variables With Form Content
     var name = $("#name").val();
     var email = $("#email").val();
-    var fecha = $("#input_date").val();
-    var hora = $("#input_time").val();
     var guest = $("#guest").val();
-    var telefono = $("#phone").val();
-    var message = $("#message").val();
+  
 
 
     $.ajax({
         type: "POST",
         url: "./conect.php",
-        data: "name=" + name + "&email=" + email + "&guest=" + guest + "&hora=" + hora + "&fecha=" + fecha +"&telefono=" + telefono + "&message=" + message,
+        data: "name=" + name + "&email=" + email + "&guest=" + guest + "&message=" + message,
         success : function(text){
             if (text == "success"){
                 formSuccess();
@@ -50,7 +47,7 @@ function formError(){
 
 function submitMSG(valid, msg){
     if(valid){
-        var msgClasses = "h3 text-center tada animated text-success";
+        var msgClasses = alert("h3 text-center text-success");
     } else {
         var msgClasses = "h3 text-center text-danger";
     }

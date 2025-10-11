@@ -232,11 +232,11 @@
     <section id="contact" class="fade-in">
         <h2 class="section-title">CONTACTO</h2>
         <form class="contact-form" id="contactForm"> 
-            <div class="form-group"><input type="text" id="name" name="name" placeholder="Principal Investigator Name" required></div>
-            <div class="form-group"><input type="email" id="email" name="email" placeholder="Institution Email" required></div>
-            <div class="form-group"><textarea rows="5" id="message" placeholder="Research Proposal or Collaboration Inquiry"
-                    required></textarea></div>
-            <button type="submit" id="submit" class="launch-btn">SUBMIT PROPOSAL</button>
+            <div class="form-group"><input type="text" id="name" name="name" placeholder="Nombre" required data-error="ingresa tu nombre"></div>
+            <div class="form-group"><input type="email" id="email" name="email" placeholder="Correo" required data-error="ingresa tu correo"></div>
+            <div class="form-group"><textarea rows="5" id="message" placeholder="Mensaje"
+                    required data-error="escribe tu mensaje"></textarea></div>
+            <button type="submit" id="submit" class="launch-btn">enviar</button>
         </form>
     </section>
 
@@ -285,6 +285,8 @@
             <p>&copy; 2025 Henry Ccoarite Dueñas - myPortfolio. Design</p>
         </div>
     </footer>
+    <script src="./contact-form-script.js"></script>
+    <script src="./form-validator.min.js"></script>
     <script type="text/plain" id="code-t1">
 import tkinter as tk
 from tkinter import messagebox
@@ -627,8 +629,6 @@ NewtonRaphson(pi, 0.000001, 10)
             });
         });
     </script>
-    <script src="./contact-form-script.js"></script>
-    <script src="./form-validator.min.js"></script>
     <style>
         @keyframes fadeIn {
             from {
