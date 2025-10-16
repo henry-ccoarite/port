@@ -584,10 +584,11 @@ NewtonRaphson(pi, 0.000001, 10)
                 </div>
                 <div style="display:flex;gap:10px;justify-content:center;margin-top:16px;">
                     <button id="copiar-btn" style="background:#10b981;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">Copiar código</button>
-                    <button id="descargar-btn" style="background:#7c3aed;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600;">Descargar</button>
+                    <a><button id="descargar-btn" style="background:#7c3aed;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:600;">Descargar</button></a>
                     <button id="cerrar-btn" style="background:#4b5563;color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">Cerrar</button>
                 </div>
             `;
+            
             fondo.appendChild(modal);
             document.body.appendChild(fondo);
             const codeElem = modal.querySelector('pre code');
@@ -599,7 +600,8 @@ NewtonRaphson(pi, 0.000001, 10)
             document.getElementById('descargar-btn').onclick = () => {
                 const a = document.createElement('a');
                 a.href = enlace;
-                a.download = enlace.split('/').pop();
+                a.target = '_blank';
+                //a.download = enlace.split('/').pop();
                 a.click();
             };
             document.getElementById('copiar-btn').onclick = () => {
