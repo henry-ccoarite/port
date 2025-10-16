@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyPort-Henry_Ccoarite</title>
     <head> 
-        <link rel="icon" type="image/png" href="./img/icon.png">
+        <link rel="icon" type="image/png" href="./img/i.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,7 +178,7 @@
                             <p style="text-align:left;">.</p>
                         </div>' data-file="./files/NEWTON_RAPHSON.pdf" data-codeid="code-t4">T4: METODO NEWTON
                             RAPHSON</button>
-                    </div>
+                    </div class="btn-modal">
                     <button class="mission-status open-modal" data-title="SOLUCIONES ITERATIVAS TEMA NEWTON RAPHSON."
                             data-desc='<div>
                             <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
@@ -186,24 +186,20 @@
                                 TRABAJO ENCARGADO EN PDF SOLUCIONES ITERATIVAS CON EJERCICIOS DEL METODO NEWTON RAPHSON. descargar pdf.</p>
                         </div>' data-file="./files/SOLUCION ITERATIVAS NEWTON RAPSHON.pdf">T5: SOLUCIONES ITERATIVAS NEWTON RAPHSON.
                             </button>
-                    
                 </div>
-
                 <div class="about-card">
                     <span class="about-card-icon">🛰️</span>
                     <h4>UNIDAD 2</h4>
                     <p>trabajos encargados de programacion numerica</p>
                     <a href="#" class="mission-status" download="">descargar</a>
                 </div>
-
                 <div class="about-card">
                     <span class="about-card-icon">🌌</span>
                     <h4>OTROS</h4>
                     <a href="#" class="mission-status" download="">descargar</a>
                 </div>
-            </div>
-
-            <div class="achievements-grid">
+                </div>
+                <div class="achievements-grid">
                 <div class="achievement-item">
                     <div class="achievement-number">5</div>
                     <div class="achievement-label">archivos</div>
@@ -216,8 +212,8 @@
                     <div class="achievement-number">0</div>
                     <div class="achievement-label">archivos</div>
                 </div>
-            </div>
-        </div>
+                </div>
+                </div>
     </section>
 
     <section id="equipment" class="fade-in">
@@ -245,23 +241,23 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Research Areas</h3>
+                <h3>FINESI y UNAP</h3>
                 <ul>
-                    <li><a href="#">Exoplanet Discovery</a></li>
-                    <li><a href="#">Astrobiology</a></li>
-                    <li><a href="#">Atmospheric Analysis</a></li>
-                    <li><a href="#">SETI Research</a></li>
-                    <li><a href="#">Space Technology</a></li>
+                    <li><a href="https://www.facebook.com/Ingenieria.Estadistica.e.Informatica.UNA.Puno">Ingenieria Estadistica e Informatica</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="https://www.facebook.com/unapunooficial">Universidad Nacional del Altiplano</a></li>
+                    <li><a href="#">Programacion Numerica</a></li>
+                    <li><a href="#"></a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h3>Publications</h3>
+                <h3>Recursos</h3>
                 <ul>
-                    <li><a href="#">Nature Astronomy</a></li>
-                    <li><a href="#">Astrophysical Journal</a></li>
-                    <li><a href="#">Science Magazine</a></li>
-                    <li><a href="#">Research Papers</a></li>
+                    <li><a href="#">-Repositorio Git Hub</a></li>
+                    <li><a href="#">-Articulos/documentos(PDFs de trabajos)</a></li>
+                    <li><a href="#">-Lenguaje (python)</a></li>
+                    <li><a href="#">-IDEs/Editor: VS code.</a></li>
                 </ul>
             </div>
 
@@ -597,7 +593,6 @@ NewtonRaphson(pi, 0.000001, 10)
             const codeElem = modal.querySelector('pre code');
             codeElem.textContent = codigo;
 
-            // ¡REACTIVACIÓN DEL RESALTADO DE SINTAXIS!
             if (window.hljs) hljs.highlightElement(codeElem);
             document.getElementById('cerrar-btn').onclick = () => fondo.remove();
             document.getElementById('btn-cerrar').onclick = () => fondo.remove();
