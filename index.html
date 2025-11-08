@@ -256,23 +256,50 @@ Uso en el reporte: En este informe, el Índice H se utiliza como indicador princ
                             data-codeid="codeU2-t3">T3: METODO DE LA SECANTE</button>
                     </div>
                     <div class="btn-modal">
-                        <button class="mission-status open-modal" data-title="REGULA FALSI(REGLA FALSA)" data-desc='<div>
+                        <button class="mission-status open-modal" data-title="METODO DE PUNTO FIJO" data-desc='<div>
                             <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">TEORIA:</h3>
                             <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
-                              <p><strong>Teoría del Método de Newton-Raphson:</strong> Es un procedimiento <strong>numérico iterativo</strong> para encontrar <strong>raíces</strong> de ecuaciones no lineales \(f(x)=0\), basado geométricamente en el uso de la <strong>recta tangente</strong>. Su <strong>fórmula de iteración</strong> es \(x_{n+1}=x_{n}-\frac{f(x_{n})}{f^{\prime}(x_{n})}\), derivada de la <strong>expansión de Taylor</strong>. El método tiene <strong>convergencia cuadrática</strong> (\(e_{n+1}\approx Ce_{n}^{2}\)), lo que duplica los dígitos correctos por iteración. Las <strong>condiciones clave</strong> para funcionar son que \(f(x)\) sea <strong>continua y derivable</strong>, que \(f^{\prime}(x)\ne0\), y que el valor inicial \(x_{0}\) sea cercano a la raíz.</p>.
-                            </p>
-
-                            <h4 style="color:#a78bfa; margin-top:15px;">PROGRAMA EN PYTHON</h4>
-                            <p style="text-align:left;">.</p>
-                        </div>' data-file="./files/NEWTON_RAPHSON.pdf" data-codeid="code-t4">T4: METODO DE PUNTO FIJO
+                             <p>
+                             El Método de Punto Fijo es una técnica iterativa que reescribe la ecuación f(x)=0 como x=g(x) para encontrar la solución mediante aproximaciones sucesivas. <di>El Error Absoluto mide la diferencia de una aproximación con la anterior, mientras que el Error Relativo mide esa diferencia en proporción a la aproximación actual.
+                            <div/></p> 
+                        <h3>📉 Los Errores Esenciales</h3>
+                        <p>El Error Absoluto es la diferencia directa entre la aproximación actual y la anterior. Mide la magnitud del cambio entre iteraciones y tiene las mismas unidades que la variable. El Error Relativo toma el Error Absoluto y lo divide por la aproximación actual, proporcionando una medida de la precisión independiente de la escala de la solución (generalmente se expresa como porcentaje).</p>
+                        <h3>Ventajas y Desventajas del Método del Punto Fijo</h3><hr><h4>Ventajas</h4><ul>
+                        <li>Fácil de Implementar: Es un método conceptualmente simple y su fórmula de iteración es muy directa.</li>
+                        <li>Flexibilidad en la Formulación: La ecuación f(x)=0 se puede reescribir de múltiples maneras como x=g(x), lo que permite buscar una forma que garantice la convergencia.</li>
+                        <li>Baja Demanda de Cálculo: No requiere el cálculo de derivadas en cada paso, a diferencia de otros métodos numéricos como Newton-Raphson.</li>
+                        </ul>
+                        <hr><h4>Desventajas</h4><ul>
+                        <li>Convergencia Condicionada: La principal limitación es que solo converge si el valor absoluto de la derivada de g(x) es menor que 1 en el intervalo de la raíz; de lo contrario, diverge.</li>
+                        <li>Lentitud en la Convergencia: Cuando el método converge, lo hace de forma lineal, lo que es considerablemente más lento para alcanzar la precisión deseada en comparación con métodos de convergencia cuadrática.</li>
+                        <li>Dependencia de g(x): El éxito y la rapidez del método dependen totalmente de la forma específica en que se reordene la ecuación original a x=g(x).</li>
+                        </ul>
+                            <p style="text-align:left;">.</p><h4 style="color:#a78bfa; text-align:center;">VIDEO DESCRIPTIVO</h4>
+                            <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
+                              <video  src="videos_met/metodo_punto.mp4"  autoplay muted controls style="width:300px; height:250px; "> </video>
+                            <div>
+                            <p style="text-align:left;"></p>
+                        </div>' data-file="./files/METODO_PUNTO_FIJO.pdf" data-codeid="codeU2-t4">T4: METODO DE PUNTO FIJO
                             </button>
                     </div class="btn-modal">
-                    <button class="mission-status open-modal" data-title="SOLUCIONES ITERATIVAS TEMA NEWTON RAPHSON."
+                    <button class="mission-status open-modal" data-title="METODO REGULA FALSI(REGLA FALSA)."
                             data-desc='<div>
-                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">DESCRIPCION DEL METODO</h3>
                             <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
-                                TRABAJO ENCARGADO EN PDF SOLUCIONES ITERATIVAS CON EJERCICIOS DEL METODO NEWTON RAPHSON. ver pdf.</p>
-                        </div>' data-file="./files/SOLUCION ITERATIVAS NEWTON RAPSHON.pdf">T5: METODO REGULA FALSI(REGLA FALSA).
+                                <h3>Método de Regula Falsi (Regla Falsa)</h3><p>El <b>Método de Regula Falsi</b> es una técnica iterativa de intervalo que encuentra la raíz de una función continua trazando una <b>recta secante</b> entre los puntos extremos del intervalo y usando su intersección con el eje X como la nueva aproximación.</p>
+
+                            <h4>Errores (Esenciales)</h4><p>
+                            El <b>Error Absoluto</b> mide la diferencia directa entre la aproximación actual y la anterior. El <b>Error Relativo</b> mide esa diferencia en proporción al valor actual, lo que da una idea de la precisión sin depender de la escala de la solución.</p>
+                        <h4>Ventajas y Desventajas (Clave)</h4><ul>
+                        <li><b>Ventaja:</b> Garantiza la convergencia (si hay cambio de signo) y es generalmente más rápido que el método de bisección.</li>
+                        <li><b>Desventaja:</b> Puede converger muy lentamente si la función tiene mucha curvatura, ya que se puede "pegar" a uno de los extremos del intervalo.</li>
+                        </ul></p>
+                        <p style="text-align:left;">.</p><h4 style="color:#a78bfa; text-align:center;">VIDEO DESCRIPTIVO</h4>
+                            <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
+                              <video  src="videos_met/metodo_falsi.mp4"  autoplay muted controls style="width:300px; height:250px; "> </video>
+                            <div>
+                            <p style="text-align:left;"></p>
+                        </div>' data-file="./files/METODO_REGLA_FALSA.pdf" data-codeid="codeU2-t5">T5: METODO REGULA FALSI(REGLA FALSA).
                             </button>
                     <a href="#" class="mission-status" download="">Ver pdf..</a>
                 </div>
@@ -751,7 +778,138 @@ if __name__ == "__main__":
         print(f"Error: {e}")
 
 </script>
+<script type="text/plain" id="codeU2-t4">
+import math
+def punto_fijo(g, x0, tol=1e-6, max_iter=100):
+    
+    print(f"{'Iter':<6} {'x_i':<15} {'g(x_i)':<15} {'Error':<15}")
+    print("-" * 51)
+    
+    x_ant = x0
+    print(f"{0:<6} {x0:<15.8f} {'-':<15} {'-':<15}")
+    
+    for i in range(max_iter):
+        x_nuevo = g(x_ant)
+        
+        if x_nuevo != 0:
+            error = abs((x_nuevo - x_ant) / x_nuevo)
+        else:
+            error = abs(x_nuevo - x_ant)
+            
+        print(f"{i+1:<6} {x_nuevo:<15.8f} {g(x_nuevo):<15.8f} {error:<15.8f}")
+        
+        if error < tol:
+            print(f"\nRaíz encontrada: {x_nuevo:.10f}")
+            print(f"Iteraciones: {i+1}")
+            return x_nuevo, i+1
+            
+        x_ant = x_nuevo
+    
+    print(f"\nSe alcanzó el máximo de iteraciones")
+    print(f"Última aproximación: {x_nuevo:.10f}")
+    return x_nuevo, max_iter
 
+
+def verificar_convergencia(g, dg, x_aprox):
+    
+    derivada = dg(x_aprox)
+    print(f"\nVerificación de convergencia:")
+    print(f"|g'({x_aprox:.6f})| = {abs(derivada):.6f}")
+    
+    if abs(derivada) < 1:
+        print("✓ El método converge (|g'(x)| < 1)")
+    else:
+        print("✗ El método NO converge (|g'(x)| >= 1)")
+
+
+if __name__ == "__main__":
+    
+    print("Método de Punto Fijo")
+    print("="*51)
+    print("Ejemplo: Raíz de e^x - 4x = 0")
+    print("Función de iteración: g(x) = ln(4x)")
+    print("Valor inicial: x0 = 1.0\n")
+    
+    def g_pdf(x):
+        return math.log(4 * x)
+        
+    def dg_pdf(x):
+        return 1 / x
+
+    def f_pdf(x):
+        return math.exp(x) - 4 * x
+
+    try:
+        raiz, iteraciones = punto_fijo(g_pdf, 1.0, tol=1e-6)
+        verificar_convergencia(g_pdf, dg_pdf, raiz)
+        print(f"Verificación: e^x - 4x = {f_pdf(raiz):.10f}")
+    except ValueError as e:
+        print(f"Error de ejecución: {e}")
+    except Exception as e:
+        print(f"Error: {e}")
+</script>
+<script type="text/plain" id="codeU2-t5">
+import math
+def regula_falsi(f, a, b, tol=1e-6, max_iter=100):
+    
+    if f(a) * f(b) > 0:
+        raise ValueError("f(a) y f(b) deben tener signos opuestos")
+    
+    print(f"{'Iter':<6} {'a':<18} {'b':<18} {'c':<18} {'f(c)':<18} {'Error':<18}")
+    print("-" * 96)
+    
+    c_ant = a
+    
+    for i in range(max_iter):
+        fa = f(a)
+        fb = f(b)
+        
+        c = a - fa * (b - a) / (fb - fa)
+        fc = f(c)
+        
+        if i > 0:
+            error = abs(c - c_ant)
+        else:
+            error = abs(b - a)
+        
+        print(f"{i+1:<6} {a:<18.10f} {b:<18.10f} {c:<18.10f} {fc:<18.10e} {error:<18.10e}")
+        
+        if abs(fc) < tol or error < tol:
+            print("-" * 96)
+            print(f"Raíz encontrada: {c:.12f}")
+            print(f"Iteraciones: {i+1}")
+            return c, i+1
+        
+        if fa * fc < 0:
+            b = c
+        else:
+            a = c
+            
+        c_ant = c
+    
+    print(f"\nSe alcanzó el máximo de iteraciones")
+    print(f"Última aproximación: {c:.12f}")
+    return c, max_iter
+
+
+if __name__ == "__main__":
+    
+    print("Método de Regula Falsi (Regla Falsa)")
+    print("="*96)
+    print("Ejemplo: f(x) = x² - 4 (Intervalo [1, 3])")
+    
+    def funcion(x):
+        return x**2 - 4
+    
+    try:
+        raiz, iteraciones = regula_falsi(funcion, 1, 3, tol=1e-6)
+        print(f"\nVerificación: f({raiz:.12f}) = {funcion(raiz):.12e}")
+    except ValueError as e:
+        print(f"Error: {e}")
+    except Exception as e:
+        print(f"Error de ejecución: {e}")
+
+</script>
 //fin
     <script src="tooplate-stellaris-script.js"></script>
     <script src="https://kit.fontawesome.com/10581f7c6f.js" crossorigin="anonymous"></script>
