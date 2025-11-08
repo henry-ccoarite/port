@@ -214,15 +214,18 @@ Uso en el reporte: En este informe, el Índice H se utiliza como indicador princ
                         </div>' data-file="./files/INDICE_H_DOCENTES.pdf">T1: INDICE H </button>
                     </div>
                     <div class="btn-modal">
-                        <button class="mission-status open-modal" data-title="METODO DE LA SECANTE" data-desc='<div>
-                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del Programa</h3>
+                        <button class="mission-status open-modal" data-title="METODO BISECCION" data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">Descripción del metodo</h3>
                             <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
-                                Permite graficar dos funciones ingresadas por el usuario en la variable x. El programa permite graficar en un mismo sistema de coordenadas dos funciones matemáticas en la variable x, representando cada una con un color distinto para diferenciarlas visualmente y mostrando de manera clara los ejes cartesianos con sus divisiones numéricas. Además de la representación gráfica, ofrece un panel lateral donde se listan los pares ordenados (x, y) generados a partir de un valor de paso definido por el usuario, lo que facilita observar cómo cambian los resultados numéricos a medida que varía x. Asimismo, al aceptar expresiones que incluyen operaciones básicas y funciones de la librería math como sin, cos o exp, el graficador puede trabajar con una amplia variedad de expresiones, desde ecuaciones lineales hasta trigonométricas y exponenciales.
+                                El método de bisección es un procedimiento numérico utilizado para encontrar raíces de funciones continuas. Se basa en el teorema del valor intermedio, que establece que si una función cambia de signo en un intervalo [a, b], entonces existe al menos una raíz en ese intervalo. El método consiste en dividir repetidamente el intervalo a la mitad y seleccionar el subintervalo donde la función cambia de signo, reduciendo así el rango donde se busca la raíz. Este proceso se repite hasta que se alcanza una aproximación suficientemente precisa de la raíz.
                             </p>
-
-                            <h4 style="color:#a78bfa; margin-top:15px;">Restricción</h4>
-                            <p style="text-align:left;">• El muestreo de x usado en el código está acotado al rango [-200, 200].</p>
-                        </div>' data-file="./files/trabajo2.pdf" data-codeid="code-t2">T2: METODO DE BISECCION
+                            <h4 style="color:#a78bfa; text-align:center;">VIDEO DESCRIPTIVO</h4>
+                            <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
+                              <video  src="videos_met/metodo_bisec.mp4"  autoplay muted controls style="width:300px; height:250px; "> </video>
+                            <div>
+                            </div>
+                           
+                        </div>' data-file="./files/trabajo2.pdf" data-codeid="codeU2-t2">T2: METODO DE BISECCION
                             </button>
                     </div>
                     <div class="btn-modal">
@@ -622,7 +625,56 @@ def NewtonRaphson(x0, tol, n):
 
 NewtonRaphson(pi, 0.000001, 10)
 </script>
+<!--   ..........................script unidad 2........................................... -->
 
+ <script type="text/plain" id="codeU2-t2">
+   import math
+
+def biseccion(f, a, b, tol=1e-6, max_iter=100):
+    if f(a) * f(b) > 0:
+        raise ValueError("Error: f(a) y f(b) deben tener signos opuestos para asegurar la existencia de una raíz en [a, b].")
+
+    print(f"{'Iter':<5} {'a':<18} {'b':<18} {'c':<18} {'f(c)':<18} {'Error':<18}")
+    print("-" * 95)
+
+    for i in range(1, max_iter + 1):
+        c = (a + b) / 2
+        fc = f(c)
+
+        error = abs(b - a) / 2
+        
+        print(f"{i:<5} {a:<18.9f} {b:<18.9f} {c:<18.9f} {fc:<18.9f} {error:<18.9f}")
+
+        if abs(fc) < tol or error < tol:
+            print("---")
+            print(f"Éxito : Raíz aproximada encontrada en {c:.9f}")
+            print(f"Número de iteraciones: {i}")
+            return c, i
+
+        if f(a) * fc < 0:
+            b = c
+        else:
+            a = c
+    
+    print("-" * 95)
+    print(f"Aviso: Se alcanzó el máximo de {max_iter} iteraciones sin cumplir la tolerancia.")
+    return c, max_iter
+
+def funcion(x): # DEFINIR LA FUNCIÓN AQUÍ
+    return x**3 - x - 4 
+
+print("--- MÉTODO DE BISECCIÓN ---")
+print("Función: f(x) = x^3 - x - 4")
+print("Intervalo inicial: [1, 2], Tolerancia: 1e-5\n")
+
+try:
+    raiz, iteraciones = biseccion(funcion, 1, 2, tol=1e-5)
+    print(f"\nVerificación de la raíz: f({raiz:.10e}) = {funcion(raiz):.10e}")
+except ValueError as e:
+    print(e)
+</script>
+
+//fin
     <script src="tooplate-stellaris-script.js"></script>
     <script src="https://kit.fontawesome.com/10581f7c6f.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
