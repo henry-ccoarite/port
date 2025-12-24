@@ -301,7 +301,7 @@ Uso en el reporte: En este informe, el Índice H se utiliza como indicador princ
                               <video  src="videos_met/metodo_falsi.mp4"  autoplay muted controls style="width:300px; height:250px; "> </video>
                             <div>
                             <p style="text-align:left;"></p>
-                        </div>' data-file="./files/METODO_REGLA_FALSA.pdf" data-codeid="codeU2-t4">T5: METODO REGULA FALSI (REGLA FALSA).
+                        </div>' data-file="./files/METODO_REGLA_FALSA.pdf" data-codeid="codeU2-t5">T5: METODO REGULA FALSI (REGLA FALSA).
                         </button>
                     </div>
 
@@ -326,24 +326,26 @@ Uso en el reporte: En este informe, el Índice H se utiliza como indicador princ
 <img src="img/gradiente_ejm.png"
      style="width:150px; border:5px;">
 
+     <p>
+<strong>¿Qué nos dice la gradiente?</strong>
+</p>
 
+<p>
+La gradiente proporciona información clave sobre el comportamiento de una función. La
+<strong>dirección</strong> del vector gradiente indica hacia dónde la función aumenta más rápidamente,
+mientras que su <strong>magnitud</strong> señala qué tan rápido ocurre ese cambio. Además, la gradiente es
+<strong>perpendicular a las curvas de nivel</strong> de la función, lo que permite analizar su forma y
+variación en el espacio.
+</p>
 
-
-
-
-
-                            <h4>Errores (Esenciales)</h4><p>
-                            El <b>Error Absoluto</b> mide la diferencia directa entre la aproximación actual y la anterior. El <b>Error Relativo</b> mide esa diferencia en proporción al valor actual, lo que da una idea de la precisión sin depender de la escala de la solución.</p>
-                        <h4>Ventajas y Desventajas (Clave)</h4><ul>
-                        <li><b>Ventaja:</b> Garantiza la convergencia (si hay cambio de signo) y es generalmente más rápido que el método de bisección.</li>
-                        <li><b>Desventaja:</b> Puede converger muy lentamente si la función tiene mucha curvatura, ya que se puede "pegar" a uno de los extremos del intervalo.</li>
+</li>
                         </ul></p>
                         <p style="text-align:left;">.</p><h4 style="color:#a78bfa; text-align:center;">VIDEO DESCRIPTIVO</h4>
                             <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
-                              <video  src="videos_met/metodo_falsi.mp4"  autoplay muted controls style="width:300px; height:250px; "> </video>
+                              <video  src="videos_met/GRADIENTE_DS.mp4"  autoplay muted controls style="width:300px; height:250px; "> </video>
                             <div>
                             <p style="text-align:left;"></p>
-                        </div>' data-file="./files/.pdf" data-codeid="codeU2-t6">T6: GRADIENTE DE UNA FUNCION.
+                        </div>' data-file="./files/GRADIENTEEEpdf.pdf" data-codeid="codeU2-t6">T6: GRADIENTE DE UNA FUNCION.
                             </button>
                     </div>
 
@@ -352,27 +354,306 @@ Uso en el reporte: En este informe, el Índice H se utiliza como indicador princ
 
 
                     <div class="btn-modal">
-                     <button class="mission-status open-modal" data-title="gradiente.1"
+                     <button class="mission-status open-modal" data-title="RESUMEN DE ARTICULO"
                             data-desc='<div>
                             <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">D</h3>
                             <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
-                                <h3>Método de Regula Falsi (Regla Falsa)</h3><p>El <b>Método de Regula Falsi</b> es una técnica iterativa de intervalo que encuentra la raíz de una función continua trazando una <b>recta secante</b> entre los puntos extremos del intervalo y usando su intersección con el eje X como la nueva aproximación.</p>
+                                <h3>Comparing the moore-Penrose Pseudoinversa and Gradiente Descend</h3><p><p>
+El documento compara dos métodos para resolver la regresión lineal: la pseudoinversa
+de Moore-Penrose y el descenso de gradiente. La regresión lineal tiene como objetivo
+ajustar un modelo minimizando el error cuadrático mediante el método de mínimos cuadrados.
+</p>
 
-                            <h4>Errores (Esenciales)</h4><p>
-                            El <b>Error Absoluto</b> mide la diferencia directa entre la aproximación actual y la anterior. El <b>Error Relativo</b> mide esa diferencia en proporción al valor actual, lo que da una idea de la precisión sin depender de la escala de la solución.</p>
-                        <h4>Ventajas y Desventajas (Clave)</h4><ul>
-                        <li><b>Ventaja:</b> Garantiza la convergencia (si hay cambio de signo) y es generalmente más rápido que el método de bisección.</li>
-                        <li><b>Desventaja:</b> Puede converger muy lentamente si la función tiene mucha curvatura, ya que se puede "pegar" a uno de los extremos del intervalo.</li>
+<p>
+La pseudoinversa proporciona una solución analítica exacta en un solo paso, siendo rápida
+y eficiente para conjuntos de datos pequeños o medianos, aunque puede presentar problemas
+de estabilidad y alto costo computacional en matrices grandes.
+</p>
+
+<p>
+Por otro lado, el descenso de gradiente es un método iterativo, más flexible y escalable,
+adecuado para grandes volúmenes de datos, pero sensible a la tasa de aprendizaje y con mayor
+consumo de tiempo y memoria.
+</p>
+
+<p>
+En conclusión, la elección del método depende del tamaño del problema y los recursos
+disponibles: la pseudoinversa es preferible para problemas pequeños, mientras que el
+descenso de gradiente resulta más conveniente en escenarios de gran escala.
+</p>
+</li>
                         </ul></p>
-                        <p style="text-align:left;">.</p><h4 style="color:#a78bfa; text-align:center;">VIDEO DESCRIPTIVO</h4>
+                        <p style="text-align:left;">.</p><h4 style="color:#a78bfa; text-align:center;">TABLA DE COMPARACION</h4>
+                        <img src="img/TABLA_COMP.png"
+     style="width:270px; border:5px; display:block; margin:auto;">
+     </ul></p>
+     <p>
+El modelo <b>lm()</b> es más rápido y consume menos memoria al ofrecer una solución directa.
+El descenso de gradiente requiere más tiempo y recursos, pero es más flexible para grandes
+volúmenes de datos.
+</p>
+
+                        <p style="text-align:left;">.</p><h4 style="color:#a78bfa; text-align:center;">MEMORIA Y TIEMPO</h4>
+                        <img src="img/TIMEEE.png"
+     style="width:270px; border:5px; display:block; margin:auto;">
+     </ul></p>
+     <p>
+En términos de tiempo y memoria, el modelo <b>lm()</b> es más rápido y eficiente para
+conjuntos de datos pequeños o medianos, ya que obtiene la solución en un solo paso.
+</p>
+
+<p>
+El descenso de gradiente requiere más tiempo y recursos debido a sus iteraciones, pero
+es más flexible y adecuado para problemas de gran escala.
+</p>
+
+<p>
+<b>Recomendación:</b> usar <b>lm()</b> para análisis pequeños y descenso de gradiente
+para grandes volúmenes de datos.
+</p>
+
+
                             <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
-                              <video  src="videos_met/metodo_falsi.mp4"  autoplay muted controls style="width:300px; height:250px; "> </video>
                             <div>
                             <p style="text-align:left;"></p>
-                        </div>' data-file="./files/.pdf" data-codeid="codeU2-t6">T7: GRADIENTE DESENDIENTE COMPARACION.
+                        </div>' data-file="./files/ARTICULO.pdf" data-codeid="codeU2-t7">T7: ANALISIS DEL ARTICULO-.
                             </button>
                     </div>
 
+
+
+
+
+                    <div class="btn-modal">
+                     <button class="mission-status open-modal" data-title="SUPERVIVENCIA CARAMELOS Y CHUPETINES "
+                            data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">D</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+</p><p>
+<h2>Simulación del Sistema de Canje de Caramelos y Chupetines</h2>
+
+<h3>Descripción del Problema</h3>
+<p>Se tiene un grupo de 9 personas, cada una con 2 caramelos, sumando un total de 18 dulces. Los caramelos son de tres tipos: A, B y C. El objetivo es que mediante intercambios y reglas de canje, cada persona obtenga exactamente un chupetín, es decir, 9 chupetines en total.</p>
+
+<h3>Parámetros Iniciales</h3>
+<ul>
+  <li>Número de integrantes: 9</li>
+  <li>Tipos de dulces: A, B, C</li>
+  <li>Total de dulces iniciales: 18</li>
+  <li>Distribución inicial: cada persona recibe 2 dulces (pueden repetirse)</li>
+  <li>Inicialmente, nadie tiene chupetines</li>
+</ul>
+
+<h3>Reglas del Sistema</h3>
+<ul>
+  <li><strong>R1:</strong> Si se forma un trío A+B+C, se canjea por 1 chupetín.</li>
+  <li><strong>R2:</strong> Si se forman dos tríos (2A+2B+2C), se canjean por 2 chupetines más 1 caramelo aleatorio adicional.</li>
+  <li><strong>R3:</strong> Si una persona devuelve un chupetín, recibe 3 caramelos aleatorios.</li>
+</ul>
+
+<h3>Condiciones de Finalización</h3>
+<ul>
+  <li>El proceso continúa hasta alcanzar 9 chupetines.</li>
+  <li>Todos los dulces se comparten entre los 9 integrantes.</li>
+  <li>Las reglas se aplican en el orden de prioridad: R2 → R1 → R3</li>
+</ul>
+</p>
+
+                            <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
+                            <div>
+                            <p style="text-align:left;"></p>
+                        </div>' data-file="./files/CODIGO_ITERACION henry.pdf" data-codeid="codeU2-t8">T8: JUEGO DE SUPERVIVENCIA CARAMELOS-CHUPETINES.
+                            </button>
+                    </div>
+
+
+
+                    <div class="btn-modal">
+                     <button class="mission-status open-modal" data-title="RESUMEN ARTICULO"
+                            data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">D</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+</p><p>El artículo "Non-rigid medical image registration using image field in Demons algorithm" aborda la principal limitación del algoritmo clásico Demons, el cual depende exclusivamente de la dirección perpendicular del gradiente  y pierde información tangencial vital para el ajuste fino de los bordes[cite: 157, 163, 165]. [cite_start]Para solucionar esto, los autores proponen el método Field-Demons (FD), un mecanismo híbrido que integra un <strong>Campo de Orientación</strong> (dirección tangencial) junto con la magnitud del gradiente para guiar la deformación espacial considerando la forma intrínseca de la estructura[cite: 167, 169, 172]. [cite_start]Este enfoque fue validado mediante imágenes de RM cerebral y fondo de ojo, demostrando una precisión superior en métricas de MSE y correlación, así como una mejor alineación de estructuras anatómicas y robustez frente al ruido en comparación con algoritmos de referencia como Demons original y B-spline, a pesar de implicar una mayor complejidad computacional[cite: 177, 179, 184, 188].</p>
+</p>
+ <p style="text-align:left;">.</p><h4 style="color:#a78bfa; text-align:center;">APLICACION DE GRADIENTE</h4>
+                        <img src="img/WN.png"
+     style="width:570px; border:5px; display:block; margin:auto;">
+     </ul></p>
+     <p>
+                            <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
+                            <div>
+                            <p style="text-align:left;"></p>
+                        </div>' data-file="./files/ARTICULO RESUMEN.pdf">T9:RESUMEN ARTICULO Non-rigid medical image registration using image field in Demons algorithm
+                            </button>
+                    </div>
+
+
+                    <div class="btn-modal">
+                     <button class="mission-status open-modal" data-title="DIFERENCIACION NUMERICA"
+                            data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">D</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+</p>                                <h3>DIFERENCIACION NUMERICA</h3><p><p>
+La <b>diferenciación numérica</b> es un método matemático y computacional que permite
+aproximar la derivada de una función utilizando valores discretos, en lugar de una
+expresión analítica exacta.
+</p>
+
+<p>
+Se emplea principalmente cuando la función:
+</p>
+
+<ul>
+  <li>No se conoce de forma explícita.</li>
+  <li>Proviene de datos experimentales.</li>
+  <li>Está dada en forma de tabla.</li>
+  <li>Es compleja de derivar analíticamente.</li>
+</ul>
+
+<p>
+En la práctica, la derivada se aproxima mediante <b>diferencias finitas</b>, calculando
+el cambio de la función respecto a un pequeño incremento en la variable independiente.
+</p>
+
+<p>
+Como este incremento no puede ser infinitesimal en los cálculos computacionales, se
+utilizan valores pequeños y finitos.
+</p>
+
+<p>
+La diferenciación numérica es ampliamente utilizada en:
+</p>
+
+<ul>
+  <li>Métodos numéricos.</li>
+  <li>Análisis de datos experimentales.</li>
+  <li>Simulación científica.</li>
+  <li>Ingeniería y física computacional.</li>
+</ul>
+<p>
+su formula es:</p>
+</p>
+<img src="img/FORMULA_DIF.png"
+     style="width:150px; border:5px;">
+
+     <p><ul>
+  <li><strong>f(x)</strong>: es la función evaluada en <strong>x</strong></li>
+  <li><strong>h</strong>: es un incremento pequeño</li>
+  <li><strong>f′(x)</strong>: es la derivada aproximada de la función en <strong>x</strong></li>
+</ul>
+</p>
+
+                            <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
+                            <div>
+                            <p style="text-align:left;"></p>
+                        </div>' data-file="./files/EJERCICIOS_programacion_numerica.pdf" data-codeid="codeU2-t7">T10: DIFERENCIACION NUMERICA.
+                            </button>
+                    </div>
+
+
+
+
+
+        <div class="btn-modal">
+                     <button class="mission-status open-modal" data-title="INTERPOLACION NUMERICA"
+                            data-desc='<div>
+                            <h3 style="color:#a78bfa;font-family:Orbitron,sans-serif;">D</h3>
+                            <p style="margin:12px 0 18px 0;line-height:1.6;color:#c7d2fe;text-align:justify;">
+</p>                                <h3>INTERPOLACION</h3><p><p>
+La <b>interpolación</b> es un método matemático utilizado para estimar valores intermedios de una función a partir de un conjunto discreto de datos conocidos. Consiste en construir una función continua que pase por todos los puntos dados, permitiendo así predecir valores en intervalos donde no se tienen datos directos. La interpolación es ampliamente utilizada en diversas áreas como la ingeniería, la ciencia y la economía para analizar tendencias, realizar predicciones y modelar fenómenos complejos basados en datos experimentales o muestreados.
+</p><div class="resumen-contenido">
+
+    <h3>. Ejercicios de Interpolación Numérica</h3>
+    <ul>
+        <li><strong>Interpolación Lineal:</strong>
+            <ul>
+                <li>Fisiología (Ritmo cardíaco a los 2 min): <strong>88 ppm</strong>.</li>
+                <li>Finanzas (Precio acción día 3): <strong>$157.50</strong>.</li>
+                <li>Termodinámica (Temp. océano a 300m): <strong>10°C</strong>.</li>
+            </ul>
+        </li>
+        <li><strong>Interpolación Cuadrática:</strong>
+            <ul>
+                <li>Física (Altura proyectil a los 2s): <strong>17 metros</strong>.</li>
+                <li>Economía (Costo producir 30 unid.): <strong>$280</strong>.</li>
+                <li>Empresarial (Valoración año 3): <strong>$19 Millones</strong>.</li>
+            </ul>
+        </li>
+        <li><strong>Métodos de Lagrange y Newton:</strong>
+            <ul>
+                <li>Química (pH a los 2 min): <strong>~3.67</strong>.</li>
+                <li>Materiales (Resistencia a 300°C): <strong>~68.33 MPa</strong>.</li>
+                <li>Geofísica (Amplitud onda a los 3s): <strong>5.4</strong>.</li>
+            </ul>
+        </li>
+        <li><strong>Análisis de Error (Comparación con valor real):</strong>
+            <ul>
+                <li>Función &radic;x: Error absoluto de <strong>0.0809</strong>.</li>
+                <li>Función log<sub>10</sub>(x): Error absoluto de <strong>0.164</strong>.</li>
+                <li>Función sin(x): Error absoluto de <strong>0.0429</strong>.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+                            <div style=" width:100%; height:300px; display:flex; justify-content:center; align-items:center; ">
+                            <div>
+                            <p style="text-align:left;"></p>
+                        </div>' data-file="./files/EJERCICIOS_programacion_numerica.pdf" data-codeid="codeU2-t7">T11: INTERPOLACION.
+                            </button>
+                    </div>
+
+
+
+
+
+                      <div class="btn-modal">
+                     <button class="mission-status open-modal" data-title="
+(Lighthouse + Apache JMeter)
+"
+                            data-desc='<div>
+</h3><p></b> <div class="resumen-contenido">
+    <h2>Análisis y Optimización de Rendimiento (Lighthouse + Apache JMeter)</h2>
+    <p><strong>Caso de Estudio:</strong> Optimización de la página de ChatGPT<br>
+
+    <h3>1. Introducción y Objetivo</h3>
+    <p>El informe tiene como objetivo evaluar y optimizar el rendimiento de la interfaz web de ChatGPT. Se combina el análisis técnico de <em>frontend</em> y <em>backend</em> con la aplicación de métodos numéricos matemáticos para cuantificar la degradación del servicio y proponer un plan de mejora objetiva.</p>
+
+    <h3>2. Diagnóstico Técnico (Datos de Entrada)</h3>
+    <ul>
+        <li><strong>Google Lighthouse (Frontend):</strong>
+            <ul>
+                <li>Reveló un rendimiento deficiente en dispositivos móviles con una puntuación de <strong>44/100</strong>.</li>
+                <li>Métrica crítica: Tiempo de carga del contenido principal (LCP) de <strong>3.6 segundos</strong>.</li>
+            </ul>
+        </li>
+        <li><strong>Apache JMeter (Backend):</strong>
+            <ul>
+                <li>Utilizado para pruebas de carga, midiendo tiempos de respuesta bajo concurrencia de usuarios para detectar cuellos de botella.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>3. Aplicación de Métodos Numéricos</h3>
+    <ul>
+        <li><strong>Diferencia Centrada (Degradación):</strong> Se calculó la "tasa de degradación" instantánea del tiempo de respuesta. Esto permite medir la velocidad a la que el sistema se vuelve lento a medida que ingresan más usuarios.</li>
+        <li><strong>Interpolación Cuadrática (Predicción):</strong> Se usó para estimar el <strong>pico de carga máxima</strong>. Predice cuántos usuarios simultáneos soporta el servidor antes de alcanzar un tiempo de respuesta inaceptable o fallar.</li>
+        <li><strong>Descenso por Gradiente (Optimización):</strong> Aplicado sobre un "modelo surrogate" (modelo matemático sustituto) para encontrar los valores óptimos de configuración (como niveles de compresión o caché) que minimizan el tiempo de carga.</li>
+    </ul>
+
+    <h3>4. Conclusiones y Propuestas</h3>
+    <p>Basado en los cálculos matemáticos y métricas, se proponen acciones concretas:</p>
+    <ul>
+        <li><strong>Optimización Frontend:</strong> Reducción de scripts y compresión de imágenes (detectado por Lighthouse).</li>
+        <li><strong>Ajuste de Servidor:</strong> Aplicación de los parámetros hallados mediante el Descenso por Gradiente para estabilizar la respuesta bajo carga.</li>
+    </ul>
+</div>
+                            <p style="text-align:left;"></p>
+                        </div>' data-file="./files/Ejercicio_Aplicado_HNRCCDNS.pdf" data-codeid="codeU2-t12">T12: Análisis y Optimización de Rendimiento
+(Lighthouse + Apache JMeter).
+
+                            </button>
+                    </div>
 
 
 
@@ -747,6 +1028,10 @@ def NewtonRaphson(x0, tol, n):
 
 NewtonRaphson(pi, 0.000001, 10)
 </script>
+<script type="text/plain" id="code-5">
+    kkk
+</script>
+
 <!--   ..........................script unidad 2........................................... -->
 
  <script type="text/plain" id="codeU2-t2">
@@ -990,6 +1275,223 @@ if __name__ == "__main__":
         print(f"Error de ejecución: {e}")
 
 </script>
+<script type="text/plain" id="codeU2-t6">
+# Definimos la función y su derivada
+
+f <- function(x) { x^2 }       # f(x) = x^2
+
+f_deriv <- function(x) { 2*x } # f’(x) = 2x
+
+# Parámetros
+
+x0 <- 5
+eta <- 0.1
+n_iter <- 15
+
+x_vals <- numeric(n_iter)
+f_vals <- numeric(n_iter)
+deriv_vals <- numeric(n_iter)
+
+# Inicialización
+
+x_vals[1] <- x0
+f_vals[1] <- f(x0)
+deriv_vals[1] <- f_deriv(x0)
+
+# Ciclo de iteraciones
+
+for (i in 2:n_iter) {
+
+  x_new <- x_vals[i-1] - eta * f_deriv(x_vals[i-1])
+
+  x_vals[i] <- x_new
+  f_vals[i] <- f(x_new)
+  deriv_vals[i] <- f_deriv(x_new)
+
+}
+
+# Gráfica de resultados
+
+plot(x_vals, f_vals, type="l", col="blue", lwd=2,
+     xlab="Valores de x (actualizaciones del gradiente)",
+     ylab="Valor",
+     main="Función, Derivada y Gradiente Descendente (eje X = valores de x)")
+
+lines(x_vals, deriv_vals, col="red", lwd=2)
+lines(x_vals, x_vals, col="green", lwd=2)
+
+legend("topright",
+       legend=c("f(x)", "f’(x)", "x_i (valores del gradiente)"),
+       col=c("blue", "red", "green"), lwd=2)
+
+</script>
+<script type="text/plain" id="codeU2-t8">
+    # ==============================================================================
+# SISTEMA DE SIMULACIÓN DE CANJE DE CARAMELOS Y CHUPETINES
+# Autor: Henry Ccoarite Dueñas
+# Fecha: 30 de octubre de 2025
+# ==============================================================================
+
+# 1. Configuración Inicial [cite: 29, 30, 35, 36]
+set.seed(123)
+
+personas <- paste("P", 1:9, sep="")
+tipos <- c("A", "B", "C")
+
+# Distribución inicial: cada persona recibe 2 dulces (Patrón repetido) [cite: 14, 36, 37]
+inventario <- list(
+  c("A", "B"), c("A", "C"), c("B", "C"),
+  c("A", "B"), c("A", "C"), c("B", "C"),
+  c("A", "B"), c("A", "C"), c("B", "C")
+)
+
+chupetines <- rep(0, 9)
+iter <- 0
+
+# 2. Función para mostrar estado [cite: 39, 40, 41, 42, 43, 44]
+mostrar_estado <- function(iter, inv, ch) {
+  cat("\n==== Iteración", iter, "====\n")
+  for(i in 1:9){
+    caramelos <- if (length(inv[[i]]) > 0) paste(inv[[i]], collapse=" ") else "Ninguno"
+    cat(sprintf("%s: %-10s| Chupetines: %d\n", personas[i], caramelos, ch[i]))
+  }
+  cat("Totales -> Caramelos:", sum(sapply(inv, length)), 
+      "| Chupetines:", sum(ch), "\n")
+}
+
+# 3. Definición de Reglas
+
+# Regla R1: Trío (A+B+C) -> 1 Chupetín [cite: 17, 52]
+regla_R1 <- function(inv, ch) {
+  todos <- unlist(inv)
+  if (all(c("A", "B", "C") %in% todos)) {
+    # Retirar uno de cada tipo
+    for(t in c("A", "B", "C")) {
+      for(i in 1:9){
+        pos <- match(t, inv[[i]])
+        if(!is.na(pos)) { inv[[i]] <- inv[[i]][-pos]; break }
+      }
+    }
+    # Dar chupetín a quien menos tenga [cite: 72]
+    i <- which.min(ch)
+    ch[i] <- ch[i] + 1
+    cat("\n R1 aplicada -> +1 chupetín a", personas[i], "\n")
+  } else {
+    cat("\n R1 no aplicada\n")
+  }
+  list(inv=inv, ch=ch)
+}
+
+# Regla R2: Dos tríos (2A+2B+2C) -> 2 Chupetines + 1 Caramelo [cite: 19, 76]
+regla_R2 <- function(inv, ch) {
+  counts <- table(unlist(inv))
+  # Verifica si hay al menos 2 de cada tipo [cite: 78]
+  if (all(c("A", "B", "C") %in% names(counts)) && all(counts >= 2)) {
+    # Retirar 2 de cada tipo
+    for(t in c("A", "B", "C")) {
+      faltan <- 2
+      for(i in 1:9){
+        if(faltan == 0) break
+        pos <- match(t, inv[[i]])
+        if(!is.na(pos)) { inv[[i]] <- inv[[i]][-pos]; faltan <- faltan - 1 }
+      }
+    }
+    # Dar 2 chupetines [cite: 86]
+    for(k in 1:2){ i <- which.min(ch); ch[i] <- ch[i] + 1 }
+    
+    # Dar 1 caramelo aleatorio extra [cite: 87, 88]
+    t <- sample(c("A", "B", "C"), 1)
+    i <- sample(1:9, 1)
+    inv[[i]] <- c(inv[[i]], t)
+    
+    cat("\n R2 aplicada -> +2 chupetines y +1", t, "a", personas[i], "\n")
+  } else {
+    cat("\n R2 no aplicada\n")
+  }
+  list(inv=inv, ch=ch)
+}
+
+# Regla R3: Devolver 1 Chupetín -> Recibir 3 Caramelos [cite: 21, 99, 101]
+regla_R3 <- function(inv, ch) {
+  i <- which.max(ch) # Persona con más chupetines devuelve uno
+  if (ch[i] > 0) {
+    ch[i] <- ch[i] - 1
+    nuevos <- sample(c("A", "B", "C"), 3, replace=TRUE)
+    inv[[i]] <- c(inv[[i]], nuevos)
+    cat("\n R3 aplicada:", personas[i], "recibió", paste(nuevos, collapse=""), "\n")
+  } else {
+    cat("\n R3 no aplicada\n")
+  }
+  list(inv=inv, ch=ch)
+}
+
+# 4. Ejecución Principal [cite: 122, 123]
+mostrar_estado(iter, inventario, chupetines)
+
+while (sum(chupetines) < 9) {
+  iter <- iter + 1
+  total <- sum(sapply(inventario, length))
+  
+  # Lógica de prioridad: R2 > R1 > R3 [cite: 27, 135, 137, 139]
+  if (total >= 6 && all(c("A", "B", "C") %in% names(table(unlist(inventario)))) && 
+      all(table(unlist(inventario)) >= 2)) {
+    res <- regla_R2(inventario, chupetines)
+  } else if (all(c("A", "B", "C") %in% unlist(inventario))) {
+    res <- regla_R1(inventario, chupetines)
+  } else if (sum(chupetines) > 0) {
+    res <- regla_R3(inventario, chupetines)
+  } else {
+    cat("\n No hay reglas aplicables\n")
+    break
+  }
+  
+  inventario <- res$inv
+  chupetines <- res$ch
+  mostrar_estado(iter, inventario, chupetines)
+}
+
+cat("\n 9 chupetines alcanzados en", iter, "iteraciones\n") [cite: 144]
+    </script>
+    <script type="text/plain" id="codeU2-t12">
+        # ==============================================================================
+# CÓDIGO R: DIFERENCIA CENTRADA Y INTERPOLACIÓN CUADRÁTICA
+# ==============================================================================
+
+# --- 1. DATOS DE ENTRADA (Muestras de JMeter) ---
+samples <- c(290, 291, 292)      # Número de usuarios/muestras
+response_times <- c(7134, 7407, 7378) # Tiempo de respuesta (ms)
+
+# --- 2. DIFERENCIA CENTRADA (Tasa de Degradación) ---
+calc_diferencia_centrada <- function(f_minus_h, f_plus_h, h) {
+  return((f_plus_h - f_minus_h) / (2 * h))
+}
+
+h <- 1 # Paso entre muestras
+tasa <- calc_diferencia_centrada(response_times[1], response_times[3], h)
+
+cat("=== RESULTADOS DIFERENCIA CENTRADA ===\n")
+cat("Tasa de degradación:", tasa, "ms por usuario adicional\n\n")
+
+# --- 3. INTERPOLACIÓN CUADRÁTICA (Estimación del Pico) ---
+x <- samples
+y <- response_times
+
+# Ajuste del modelo cuadrático: y = c + bx + ax^2
+modelo <- lm(y ~ poly(x, 2, raw = TRUE))
+coefs <- coef(modelo)
+
+c <- coefs[1]
+b <- coefs[2]
+a <- coefs[3]
+
+# Cálculo del vértice (Punto óptimo/crítico)
+x_optimo <- -b / (2 * a)
+y_optimo <- a * x_optimo^2 + b * x_optimo + c
+
+cat("=== RESULTADOS INTERPOLACIÓN ===\n")
+cat("Pico de carga estimado (Usuarios):", x_optimo, "\n")
+cat("Latencia máxima estimada (ms):", y_optimo, "\n")
+    </script>
 //fin
     <script src="tooplate-stellaris-script.js"></script>
     <script src="https://kit.fontawesome.com/10581f7c6f.js" crossorigin="anonymous"></script>
